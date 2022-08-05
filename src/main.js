@@ -16,17 +16,16 @@ import ArgonDashboard from './assets/argon-dashboard.js';
 // import "./assets/js/plugins/smooth-scrollbar.min.js";
 // import "./assets/js/plugins/chartjs.min.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js";
-import "../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css";
-import "../node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css";
-import "../node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js";
-import "../node_modules/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css";
-import "../node_modules/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js";
+import "../node_modules/datatables.net-bs5/js/dataTables.bootstrap5.js";
+import "../node_modules/datatables.net-bs5/css/dataTables.bootstrap5.min.css";
+import "../node_modules/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css";
+import "../node_modules/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js";
+import "../node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
+import "../node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js";
 
 Vue.config.productionTip = false
 Vue.use(ArgonDashboard)
 Vue.use(BootstrapVue,IconsPlugin)
-// $.widget.bridge('uibutton', $.ui.button)
 
 new Vue({
   router,

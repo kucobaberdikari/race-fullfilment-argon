@@ -3,77 +3,82 @@
     <div class="row mx-2">
       <div class="col-lg-2 col-md-6 col-12">
           <div class="card mx-n3 shadow-lg position-sticky h-100 justify-content-center">
-            <ul class="list-group">
-              <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+            <ul class="nav flex-column ng-hite border-radius-lg p-1">
+              <li class="nav-item d-flex justify-content-between align-items-center">
                 <a href="#" class="nav-link text-body active">
-                  <div class="icon icon-shape icon-sm me-3 bg-gradient-dark shadow text-center">
-                    <img src="../assets/images/shopee.deffdfa.png" alt="" height="25px" width="25px">
-                  </div>
-                  <div class="d-flex flex-column">
-                    <p class="mb-0 h6">
+                  <div class="px-2 py-1 d-flex align-items-center">
+                    <img src="../assets/images/shopee.deffdfa.png" alt="" height="35px" width="35px">
+                     <div class="ms-4">
+                    <p class="mb-0 h5 font-weight-bold">
                       Shopee
                     </p>
                   </div>
+                  </div>
                 </a>
               </li>
-              <li class="nav-item px-2">
-                <a href="#" class="nav-link text-body active">
-                  <div class="d-flex px-2 py-2">
-                    <img src="../assets/images/tokopedia.a880bd9.png" alt="" height="25px" width="25px">
-                  </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <p class="mb-0 h6">
+              <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="#" class="nav-link text-body ">
+                  <div class="px-2 py-1 d-flex align-items-center">
+                    <img src="../assets/images/tokopedia.a880bd9.png" alt="" height="35px" width="35px">
+                     <div class="ms-4">
+                    <p class="mb-0 h5 font-weight-bold">
                       Tokopedia
                     </p>
                   </div>
+                  </div>
+                 
                 </a>
               </li>
-              <li class="nav-item px-2">
-                <a href="#" class="nav-link text-body active">
-                  <div class="d-flex px-2 py-2">
-                    <img src="../assets/images/lazada.6daa1e7.png" alt="" height="25px" width="25px">
+              <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="#" class="nav-link text-body">
+                  <div class="px-2 py-1 d-flex align-items-center">
+                    <img src="../assets/images/lazada.6daa1e7.png" alt="" height="35px" width="35px">
+                    <div class="ms-4">
+                      <p class="mb-0 h5 font-weight-bold">
+                        Lazada
+                      </p>
+                    </div>
                   </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <p class="mb-0 h6">
-                      Lazada
-                    </p>
-                  </div>
+
                 </a>
               </li>
-              <li class="nav-item px-2">
-                <a href="#" class="nav-link text-body active">
+              <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="#" class="nav-link text-body">
                   <div class="d-flex px-2 py-2">
-                    <img src="../assets/images/blibli.70a677a.png" alt="" height="25px" width="25px">
+                    <img src="../assets/images/blibli.70a677a.png" alt="" height="35px" width="35px">
+                    <div class="ms-4">
+                      <p class="mb-0 h5 font-weight-bold">
+                        Blibli
+                      </p>
+                    </div>
                   </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <p class="mb-0 h6">
-                      Blibli
-                    </p>
-                  </div>
+                  
                 </a>
               </li>
-              <li class="nav-item px-2">
-                <a href="#" class="nav-link text-body active">
-                  <div class="d-flex px-2 py-2">
-                    <img src="../assets/images/jdid.2d4a285.jpg" alt="" height="25px" width="25px">
+              <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="#" class="nav-link text-body">
+                  <div class="px-2 py-1 d-flex align-items-center">
+                    <img src="../assets/images/jdid.2d4a285.jpg" alt="" height="35px" width="35px">
+                    <div class="ms-4">
+                      <p class="mb-0 h5 font-weight-bold">
+                        JD.ID
+                      </p>
+                    </div>
                   </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <p class="mb-0 h6">
-                      JD.ID
-                    </p>
-                  </div>
+                
                 </a>
               </li>
-              <li class="nav-item px-2">
-                <a href="#" class="nav-link text-body active">
-                  <div class="d-flex px-2 py-2">
-                    <img src="../assets/images/bukalapak.deaba19.png" alt="" height="25px" width="25px">
+              <li class="nav-item d-flex justify-content-between align-items-center">
+                <a href="#" class="nav-link text-body">
+                  <div class="px-2 py-1 d-flex align-items-center">
+                    <img src="../assets/images/bukalapak.deaba19.png" alt="" height="35px" width="35px">
+                     <div class="ms-4">
+                        <p class="mb-0 h5 font-weight-bold">
+                          Bukalapak
+                        </p>
+                      </div>
                   </div>
-                  <div class="d-flex flex-column justify-content-center">
-                    <p class="mb-0 h6">
-                      Bukalapak
-                    </p>
-                  </div>
+                 
                 </a>
               </li>
             </ul>

@@ -1,9 +1,9 @@
   <template>
 <div class="py-4 container-fluid">
   <div class="row">
-     <div class="card">
-    <div class="card-header">
-        <div class="row row1">
+        <div class="card">
+    <div class="card-header pb-1 justify-content-end">
+        <!-- <div class="row row1"> -->
           <button type="button" class="btn btn-info" @click="showModal">Open Modal!  </button>
               <ModalAdd v-show="isModalVisible" @close="closeModal" >
                 <template v-slot:header></template>
@@ -11,7 +11,7 @@
                 <template v-slot:footer></template>
               </ModalAdd>
               <button class="btn btn-info" v-on:click="onClick()" >Notification12</button>
-        </div>         
+        <!-- </div>          -->
     </div>
     <div class="card-body">
         <table class="table table-bordered table-striped table-responsive-md" id="table1">
@@ -27,32 +27,26 @@
           <tbody>
               <tr v-for="(data,index) in datas" :key="data.id">
                 <td>{{index+1}}</td>
-                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge badge-warning badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge badge-secondary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge badge-primary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else><span class="badge badge-success badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td v-else><span class="badge bg-gradient-success badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
                 <td>{{data.tujuan}}</td>
                 <td>{{data.tanggal}}</td>
-                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge badge-warning">{{data.status}}</span></td>
-                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge badge-secondary">{{data.status}}</span></td>
-                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge badge-primary">{{data.status}}</span></td>
-                <td v-else><span class="badge badge-success">{{data.status}}</span></td>
+                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning">{{data.status}}</span></td>
+                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
+                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary">{{data.status}}</span></td>
+                <td v-else><span class="badge bg-gradient-success">{{data.status}}</span></td>
               </tr>
           </tbody>
         </table>
     </div>
       </div>
   </div>
-     
-  <!-- </div> -->
-<!-- </div> -->
 
    <button type="button" class="open-button " @click="openForm" >Chat</button>
    <ChatBox v-show="ChatVisible" @close="closeChat" />
 
-  <!-- <div class="p-3 bg-secondary progress-bar-striped" style="min-height: 170px;">
-    <b-button variant="primary" @click="makeToast('primary')" class="mb-2">Primary</b-button>
-  </div> -->
 </div>
 </template>
 
@@ -322,7 +316,7 @@ import $ from "jquery";
   padding-left: 30px;
   padding-right:20px;
 }
-span.badge1{
-  margin-right: 5px;
+.badge1{
+  margin-right: 10px;
 }
 </style>

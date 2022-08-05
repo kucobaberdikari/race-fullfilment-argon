@@ -134,14 +134,14 @@
          <tbody>
             <tr v-for="data in datas" :key="data.id">
                <!-- <td class="hidden">{{data.id}}</td> -->
-               <td>
-                <div class="d-flex px-3 py-1">
-                  <div>
-                    <i class="fa-thin fa-store"></i>
+               <td class="w-30">
+                <div class="px-2 py-1 d-flex align-items-center">
+                   <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
+                      <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
                   </div>
-                  <div class="d-flex flex-column justify content-center">
-                    <p class="h6 mb-0 text-sm mb-1">{{data.seller}}</p>
-                    <a href="#" class="text-sm text-secondary mb-0">{{data.telepon}}</a>
+                  <div class="ms-4">
+                    <p class="mb-0 text-lg font-weight-bold">{{data.seller}}</p>
+                    <a href="#" class="mb-0 text-sm">{{data.telepon}}</a>
                   </div>
                 </div>
 

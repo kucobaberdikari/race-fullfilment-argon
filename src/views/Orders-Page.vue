@@ -23,11 +23,11 @@
                                         <td  >{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td v-if="data.status === 'Inbound'"> <span class="badge badge-warning">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Proses'"> <span class="badge badge-primary">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Outbound'"> <span class="badge badge-success">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Dikirim'"> <span class="badge badge-info">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Sampai'"> <span class="badge badge-secondary">{{data.status}}</span></td>
+                                        <td v-if="data.status === 'Inbound'"> <span class="badge bg-gradient-warning">{{data.status}}</span></td>
+                                        <td v-else-if="data.status === 'Proses'"> <span class="badge bg-gradient-primary">{{data.status}}</span></td>
+                                        <td v-else-if="data.status === 'Outbound'"> <span class="badge bg-gradient-success">{{data.status}}</span></td>
+                                        <td v-else-if="data.status === 'Dikirim'"> <span class="badge bg-gradient-info">{{data.status}}</span></td>
+                                        <td v-else-if="data.status === 'Sampai'"> <span class="badge bg-gradient-secondary">{{data.status}}</span></td>
                                         <td v-else><span class="badge bagde-default">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
@@ -52,7 +52,7 @@
                                         <td>{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td><span class="badge badge-warning">{{data.status}}</span></td>
+                                        <td><span class="badge bg-gradient-warning">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
                                     </tr>
@@ -76,7 +76,7 @@
                                         <td>{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td><span class="badge badge-primary">{{data.status}}</span></td>
+                                        <td><span class="badge bg-gradient-primary">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
                                     </tr>
@@ -100,7 +100,7 @@
                                         <td>{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td><span class="badge badge-success">{{data.status}}</span></td>
+                                        <td><span class="badge bg-gradient-success">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
                                     </tr>
@@ -124,7 +124,7 @@
                                         <td>{{data.id}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td><span class="badge badge-info">{{data.status}}</span></td>
+                                        <td><span class="badge bg-gradient-info">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
                                     </tr>
@@ -148,7 +148,7 @@
                                         <td>{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
-                                        <td><span class="badge badge-secondary">{{data.status}}</span></td>
+                                        <td><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
                                         <td>{{data.gudang}}</td>
                                         <td>{{data.created_at}}</td>
                                     </tr>

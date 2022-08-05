@@ -20,7 +20,7 @@
           class="pe-md-3 d-flex align-items-center"
           :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
         >
-          <div class="input-group">
+          <!-- <div class="input-group">
             <span class="input-group-text text-body">
               <i class="fas fa-search" aria-hidden="true"></i>
             </span>
@@ -31,7 +31,8 @@
                 this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
               "
             />
-          </div>
+          </div> -->
+          
         </div>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item d-flex align-items-center">
@@ -202,7 +203,7 @@ import Breadcrumbs from "../Breadcrumbs.vue";
 import { mapMutations, mapActions } from "vuex";
 
 export default {
-  name: "navbar",
+  name: "NavBar",
   data() {
     return {
       showMenu: false

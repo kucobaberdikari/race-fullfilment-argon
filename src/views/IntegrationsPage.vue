@@ -4,7 +4,7 @@
              <div class="card">
                 <div class="card-header pb-0 pt-3">
                     <div class="float-left">
-                        <button type="button" class="btn btn-lg btn-warning"><a href="/integrations/add">ADD</a></button>
+                        <button type="button" class="btn btn-lg btn-warning"><a href="/integrations/add" class="text-decoration-none">ADD</a></button>
                     </div>
                 </div>
                 <div class="card-body">

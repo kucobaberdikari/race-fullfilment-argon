@@ -2,20 +2,18 @@
     <div class="py-4 container-fluid">
         <div class="row px-4  ">
              <div class="card border-radius-lg">
-            <div class="card-body">
+            <div class="card-body mt-7">
                 <h4 class="text-center ">Mencari Pengiriman Parcel</h4>
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <form action="simple-results.html">
                             <div class="input-group">
-                                <input type="search" class="form-control form-control-lg" placeholder="Type your keywords here">
-                                <div class="input-group-append">
-                                    <button type="submit" class="btn btn-xl btn-dark">
+                                <input type="text" class="form-control ms-0 form-control-lg" placeholder="Type your keywords here">
+                                <!-- <div class="input-group-append"> -->
+                                    <button type="submit" class="btn btn-lg btn-dark mb-0">
                                         <i class="fa fa-search"></i>
                                     </button>
-                                </div>
+                                <!-- </div> -->
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
