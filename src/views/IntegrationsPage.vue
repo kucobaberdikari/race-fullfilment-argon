@@ -8,28 +8,30 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered table-striped table-responsive-md" id="table1">
-                        <thead>
-                            <tr>
-                                <th>SERVICE</th>
-                                <th>IDENTIFIER</th>
-                                <th>TYPE</th>
-                                <th>LAST IMPORTED</th>
-                                <th>LAST EXPORTED</th>
-                                <th>SYNC STOCK</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr v-for="data in datas" :key="data.identifier" >
-                                <td>{{data.service}}</td>
-                                <td>{{data.identifier}}</td>
-                                <td>{{data.type}}</td>
-                                <td>{{data.last_imp}}</td>
-                                <td>{{data.last_exp}}</td>
-                                <td>{{data.sync_stock}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-responsive-md" id="table1">
+                            <thead>
+                                <tr>
+                                    <th>SERVICE</th>
+                                    <th>IDENTIFIER</th>
+                                    <th>TYPE</th>
+                                    <th>LAST IMPORTED</th>
+                                    <th>LAST EXPORTED</th>
+                                    <th>SYNC STOCK</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="data in datas" :key="data.identifier" >
+                                    <td>{{data.service}}</td>
+                                    <td>{{data.identifier}}</td>
+                                    <td>{{data.type}}</td>
+                                    <td>{{data.last_imp}}</td>
+                                    <td>{{data.last_exp}}</td>
+                                    <td>{{data.sync_stock}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

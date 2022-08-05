@@ -1,44 +1,86 @@
 <template>
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-lg border-radius-xl px-0 mx-4 px-0 mx-4" id="navbarBlur" data-scroll="false">
-      <div class="container-fluid py-1 px-3">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-            <li class="breadcrumb-item text-sm"><a class="opacity-5 " href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm  active" aria-current="page">Dashboard</li>
-          </ol>
-          <h6 class="font-weight-bolder  mb-0">Dashboard</h6>
-        </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4 " id="navbar">
-          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+  <nav
+    class="navbar navbar-main navbar-expand-md px-0 mx-4 shadow-sm border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky px-o mx-4 border-1"
+    :class="
+      this.$store.state.isRTL ? 'top-0 position-sticky z-index-sticky' : ''
+    "
+    v-bind="$attrs"
+    id="navbarBlur"
+    data-scroll="true"
+  >
+    <div class="px-3 py-1 container-fluid">
+      <breadCrumbs :currentPage="currentRouteName" />
+
+      <div
+        class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4"
+        :class="this.$store.state.isRTL ? 'px-0' : 'me-sm-4'"
+        id="navbar"
+      >
+        <div
+          class="pe-md-3 d-flex align-items-center"
+          :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
+        >
+          <!-- <div class="input-group">
+            <span class="input-group-text text-body">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </span>
+            <input
+              type="text"
+              class="form-control"
+              :placeholder="
+                this.$store.state.isRTL ? 'أكتب هنا...' : 'Type here...'
+              "
+            />
+          </div> -->
           
-          </div>
-         <ul class="navbar-nav justify-content-end">
-          <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+        </div>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item d-flex me-2 align-items-center">
+            <router-link
+              :to="{ name: 'Signin' }"
+              class="px-0 nav-link font-weight-bold text-dark"
+              target="_blank"
+            >
+              <i
+                class="fa fa-user"
+                :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-2'"
+              ></i>
+              <span v-if="this.$store.state.isRTL" class="d-sm-inline d-none"
+                >يسجل دخول</span
+              >
+              <span v-else class="d-sm-inline d-none">Sign In</span>
+            </router-link>
+          </li>
+          <li class="nav-item d-xl-none ps-3 me-2 d-flex align-items-center">
             <a
               href="#"
               @click="toggleSidebar"
-              class="p-0 nav-link "
-              id="iconNavbarSidenav"
+              class="p-0 nav-link text-dark"
+              id="iconNavbarSidenav" 
+              data-widget="pushmenu"
             >
               <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
-                <i class="sidenav-toggler-line bg-white"></i>
+                <i class="sidenav-toggler-line bg-dark"></i>
+                <i class="sidenav-toggler-line bg-dark"></i>
+                <i class="sidenav-toggler-line bg-dark"></i>
               </div>
             </a>
           </li>
-          <li class="px-3 nav-item d-flex align-items-center">
-            <a class="p-0 nav-link " @click="toggleConfigurator">
+          <!-- <li class="nav-item d-xl-none ps-3 me-2 d-flex align-items-center">
+            <a class="nav-link" data-widget="pushmenu" href="" role="button"><i class="fas fa-bars"></i></a>
+          </li> -->
+          <!-- <li class="px-3 nav-item d-flex align-items-center">
+            <a class="p-0 nav-link text-dark" @click="toggleConfigurator">
               <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
             </a>
-          </li>
+          </li> -->
           <li
             class="nav-item dropdown d-flex align-items-center"
             :class="this.$store.state.isRTL ? 'ps-2' : 'pe-2'"
           >
             <a
               href="#"
-              class="p-0 nav-link "
+              class="p-0 nav-link text-dark"
               :class="[showMenu ? 'show' : '']"
               id="dropdownMenuButton"
               data-bs-toggle="dropdown"
@@ -156,26 +198,42 @@
             </ul>
           </li>
         </ul>
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 </template>
-
 <script>
- import $ from "jquery";
+import BreadCrumbs from "../examples/BreadCrumbs.vue";
+import { mapMutations, mapActions } from "vuex";
+//  import $ from "jquery";
 
- export default {
-  mounted(){
-    $('[data-widget="pushmenu"]').PushMenu('toggle');
-  },
-  data(){
-    return{
+export default {
+  name: "NavBar",
+  data() {
+    return {
       showMenu: false
+    };
+  },
+  props: ["minNav", "textWhite"],
+  created() {
+    this.minNav;
+  },
+  methods: {
+    ...mapMutations(["navbarMinimize"]),
+    ...mapActions(["toggleSidebarColor"]),
+
+    toggleSidebar() {
+      this.toggleSidebarColor("bg-white");
+      this.navbarMinimize();
+    }
+  },
+  components: {
+    BreadCrumbs
+  },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
     }
   }
- }
+};
 </script>
-
-<style scoped>
-
-</style>

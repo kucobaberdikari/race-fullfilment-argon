@@ -3,10 +3,22 @@
      <div v-show="this.$store.state.layout === 'landing'" class="landing-bg h-100 position-fixed w-100"></div>
   <!-- <NavBar /> -->
     <SideBar 
+     :custom_class="this.$store.state.mcolor"
+    :class="[
+      this.$store.state.isTransparent,
+      this.$store.state.isRTL ? 'fixed-end' : 'fixed-start'
+    ]"
+    v-if="this.$store.state.showSidenav"
     />
     <main class="main-content positiion-relative max-height-vh-100 h-100 border-radius-lg">
        
-      <NavBar/>
+      <NavBar
+       :class="[navClasses]"
+      :textWhite="
+        this.$store.state.isAbsolute ? 'text-white opacity-8' : 'text-white'
+      "
+      :minNav="navbarMinimize"
+      v-if="this.$store.state.showNavbar"/>
         <!-- Route VIew -->
       <router-view />
         <!-- Footer Page -->
@@ -22,11 +34,14 @@ import NavBar from "@/components/NavBar";
 import SideBar from "@/components/SideBar";
 // import Configurator from "@/examples/ConfiguratoR.vue"
 import AppFooter from "@/examples/Footer.vue";
+import { mapMutations } from "vuex";
 export default{
   name : 'App',
-  components: {NavBar,SideBar,AppFooter},
+  components: {NavBar,
+  SideBar,
+  AppFooter},
   methods: {
-    // ...mapMutations(["toggleConfigurator", "navbarMinimize"])
+    ...mapMutations(["navbarMinimize"])
   },
   computed: {
     navClasses() {
@@ -42,7 +57,7 @@ export default{
     }
   },
   beforeMount() {
-    this.$store.state.isTransparent = "bg-transparent";
+    this.$store.state.isTransparent = "bg-white";
   }
 }
 </script>

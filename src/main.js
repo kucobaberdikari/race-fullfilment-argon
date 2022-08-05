@@ -5,10 +5,13 @@ import store from './store'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
-import "./assets/css/argon-dashboard.css";
+// import "./assets/css/argon-dashboard.css";
 // import $ from "jquery";
 
 import ArgonDashboard from './assets/argon-dashboard.js';
+
+import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css"
+import "../node_modules/bootstrap-vue/dist/bootstrap-vue.js"
 
 // import "./assets/js/core/popper.min.js";
 // import "./assets/js/core/bootstrap.min.js";

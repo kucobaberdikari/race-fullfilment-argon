@@ -114,7 +114,7 @@
                       <td>{{data.Image}}</td>
                       <td>{{data.Name}}</td>
                       <td>{{data.SKU}}</td>
-                      <td ><span class="badge badge-info">{{data.store}}</span></td>
+                      <td ><span class="badge bg-gradient-info">{{data.store}}</span></td>
                       <td>{{data.stock}}</td>
                       <td>{{data.price}}</td>
                       <td>{{data.created_date}}</td>
