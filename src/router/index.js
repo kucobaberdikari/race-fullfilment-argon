@@ -10,7 +10,7 @@ import OrdersPage from '@/views/Orders-Page.vue'
 import OutboundPage from '@/views/Outbound-Page.vue'
 import ProductPage from '@/views/Product-Page.vue'
 import trackingPage from '@/views/tracking-Page.vue'
-import IntegrationS from '@/views/IntegrationsPage.vue'
+import IntegrationsPage from '@/views/IntegrationsPage.vue'
 import IntegrationAdd from '@/views/IntegrationAddPage.vue'
 
 Vue.use(VueRouter)
@@ -81,8 +81,8 @@ const routes = [
   },
   {
     path: '/integrations',
-    name: 'IntegrationS',
-    component: IntegrationS
+    name: 'IntegrationsPage',
+    component: IntegrationsPage
   },
   {
     path: '/integrations/add',

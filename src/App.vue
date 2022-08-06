@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="g-sidenav-show g-sidenav-pinned">
      <div v-show="this.$store.state.layout === 'landing'" class="landing-bg h-100 position-fixed w-100"></div>
   <!-- <NavBar /> -->
     <SideBar 

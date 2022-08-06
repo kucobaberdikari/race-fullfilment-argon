@@ -5,9 +5,9 @@
            <div class="card shadow-lg position-sticky h-auto mb-2">
             <ul class="nav flex-column bg-white border-radius-lg p-1 ">
               <li class="nav-item d-flex justify-content-between align-items-center mt-1">
-                <a href="#" class="nav-link text-body active">
+                <a href="#" class="nav-link text-body active ms-2">
                   <div class=" icon-lg h-100 w-100 d-flex align-items-center">
-                    <i class="fas fa-briefcase mt-2 " ></i>
+                    <i class="fas fa-briefcase fa-2xl mt-2 " ></i>
                      <div class="ms-2">
                     <p class="mb-0 h5 font-weight-bold">
                       Master
@@ -107,7 +107,7 @@
          <div class="col-lg-10 col-md-6 col-12">
             <div class="card shadow-sm card-body h-75">
                <div class="table-responsive">
-                  <table class="table table-bordered table-striped table-responsive-xl mb-0 w-auto" id="table1">
+                  <table class="table table-striped table-responsive-xl mb-0 w-auto" id="table1">
                         <thead>
                            <tr >
                               <th>No</th>
@@ -123,15 +123,15 @@
                         </thead>
                         <tbody>
                            <tr v-for="data in datas" :key="data.id" id="table1">
-                              <td>{{data.id}}</td>
-                              <td>{{data.kd_inbound}}</td>
-                              <td>{{data.costumer}}</td>
-                              <td>{{data.alamat}}</td>
-                              <td ><p class="badge bg-gradient-info rounded-1">{{data.status}}</p></td>
-                              <td>{{data.kurir}}</td>
-                              <td>{{data.exported}}</td>
-                              <td>{{data.order_date}}</td>
-                              <td>{{data.created}}</td>
+                              <td class="dt-body-center">{{data.id}}</td>
+                              <td class="dt-body-center">{{data.kd_inbound}}</td>
+                              <td class="dt-body-center">{{data.costumer}}</td>
+                              <td class="dt-body-center">{{data.alamat}}</td>
+                              <td class="dt-body-center" ><p class="badge bg-gradient-info rounded-1">{{data.status}}</p></td>
+                              <td class="dt-body-center">{{data.kurir}}</td>
+                              <td class="dt-body-center">{{data.exported}}</td>
+                              <td class="dt-body-center">{{data.order_date}}</td>
+                              <td class="dt-body-center">{{data.created}}</td>
                            </tr>
                         </tbody>
                      </table>
@@ -152,7 +152,11 @@ export default{
     components: {}, 
     mounted(){
        $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,
+         "responsive": false,"lengthChange": false,"ordering":false,
+          columnDefs: [
+      {
+          className: 'dt-head-center dt-body-center'
+      }]
      });
     },  
     data(){

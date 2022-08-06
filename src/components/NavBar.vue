@@ -57,7 +57,7 @@
               @click="toggleSidebar"
               class="p-0 nav-link text-dark"
               id="iconNavbarSidenav" 
-              data-widget="pushmenu"
+              
             >
               <div class="sidenav-toggler-inner">
                 <i class="sidenav-toggler-line bg-dark"></i>
@@ -234,6 +234,22 @@ export default {
     currentRouteName() {
       return this.$route.name;
     }
+  },
+  mutations:{
+      navbarMinimize(state) {
+      const sidenav_show = document.querySelector(".g-sidenav-show");
+
+      if (sidenav_show.classList.contains("g-sidenav-hidden")) {
+        sidenav_show.classList.remove("g-sidenav-hidden");
+        sidenav_show.classList.add("g-sidenav-pinned");
+        state.isPinned = true;
+      } else {
+        sidenav_show.classList.add("g-sidenav-hidden");
+        sidenav_show.classList.remove("g-sidenav-pinned");
+        state.isPinned = false;
+      }
+    },
   }
+
 };
 </script>

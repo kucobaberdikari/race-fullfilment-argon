@@ -119,9 +119,9 @@
             </div>
         </div>
     </div>
-    <div class="row mt-4">
-       <div class="card">
-      <table class="table table-bordered table-striped table-responsive-md" id="table1">
+    <div class="row mt-4 ms-2 me-2">
+       <div class="card ">
+      <table class="table  table-striped table-responsive-md mt-3 align-items-center" id="table1">
          <thead>
             <tr>
                <!-- <th>No</th> -->
@@ -146,9 +146,9 @@
                 </div>
 
                </td>
-               <td>{{data.barcode}}</td>
-               <td>{{data.SKU}}</td>
-               <td>{{data.stock}}</td>
+               <td><div class="ps-3">{{data.barcode}}</div></td>
+               <td><div class="ps-4">{{data.SKU}}</div></td>
+               <td><div class="ps-4">{{data.stock}}</div></td>
             </tr>
          </tbody>
       </table>
@@ -171,7 +171,8 @@ export default{
     },
     mounted(){
        $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,
+         "responsive": false,"lengthChange": false, 	
+"ordering": false,
          
      });  
     }

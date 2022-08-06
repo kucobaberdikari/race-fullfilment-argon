@@ -6,9 +6,9 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 // import "./assets/css/argon-dashboard.css";
-// import $ from "jquery";
+import * as VueGoogleMaps from "vue2-google-maps" 
 
-import ArgonDashboard from './assets/argon-dashboard.js';
+import ArgonDashboard from "./argon-dashboard";
 
 import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css"
 import "../node_modules/bootstrap-vue/dist/bootstrap-vue.js"
@@ -29,6 +29,12 @@ import "../node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"
 Vue.config.productionTip = false
 Vue.use(ArgonDashboard)
 Vue.use(BootstrapVue,IconsPlugin)
+Vue.use(VueGoogleMaps, {
+  load: { 
+    key: "AIzaSyDgQaPsC5ezUx6DyncTncHw6AW_zr_bl_4",
+    libraries: "places,drawing,visualization"
+  }
+});
 
 new Vue({
   router,

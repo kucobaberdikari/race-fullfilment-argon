@@ -1,0 +1,34 @@
+[
+    {
+        "service": "Shopee" ,
+        "identifier": "SH-2012" ,
+        "type": "Seller",
+        "last_imp":"21-12-2020" ,
+        "last_exp": "21-12-2020",
+        "sync_stock": 1200
+        },
+    {
+        "service": "Tokopedia" ,
+        "identifier": "TP-2020" ,
+        "type": "Seller",
+        "last_imp":"21-12-2020" ,
+        "last_exp": "21-12-2020",
+        "sync_stock":1300
+        },
+    {
+        "service": "Bukalapak",
+        "identifier":"BL-2019" ,
+        "type": "Seller",
+        "last_imp": "21-12-2020",
+        "last_exp": "21-12-2020",
+        "sync_stock":540
+        },
+    {
+        "service": "Jaja.id" ,
+        "identifier":"JA-2020" ,
+        "type": "Seller",
+        "last_imp": "21-12-2020",
+        "last_exp": "21-12-2020",
+        "sync_stock":656
+        }
+]

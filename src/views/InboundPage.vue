@@ -1,7 +1,7 @@
   <template>
 <div class="py-4 container-fluid">
   <div class="row">
-        <div class="card">
+     <div class="card">
     <div class="card-header pb-1 justify-content-end">
         <!-- <div class="row row1"> -->
           <button type="button" class="btn btn-info" @click="showModal">Open Modal!  </button>
@@ -14,7 +14,7 @@
         <!-- </div>          -->
     </div>
     <div class="card-body">
-        <table class="table table-bordered table-striped table-responsive-md" id="table1">
+        <table class="table  table-striped table-responsive-md" id="table1">
           <thead>
               <tr class="">
                 <th class="dt-head-center">No</th>
@@ -26,27 +26,33 @@
           </thead>
           <tbody>
               <tr v-for="(data,index) in datas" :key="data.id">
-                <td>{{index+1}}</td>
-                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td v-else><span class="badge bg-gradient-success badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
-                <td>{{data.tujuan}}</td>
-                <td>{{data.tanggal}}</td>
-                <td v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning">{{data.status}}</span></td>
-                <td v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
-                <td v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary">{{data.status}}</span></td>
-                <td v-else><span class="badge bg-gradient-success">{{data.status}}</span></td>
+                <td class="dt-body-center">{{index+1}}</td>
+                <td class="dt-body-center" v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td class="dt-body-center" v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td class="dt-body-center" v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td class="dt-body-center" v-else><span class="badge bg-gradient-success badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
+                <td class="dt-body-center">{{data.tujuan}}</td>
+                <td class="dt-body-center">{{data.tanggal}}</td>
+                <td class="dt-body-center" v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning">{{data.status}}</span></td>
+                <td class="dt-body-center" v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
+                <td class="dt-body-center" v-else-if="data.status === 'Sudah Diterima'"><span class="badge bg-gradient-primary">{{data.status}}</span></td>
+                <td class="dt-body-center" v-else><span class="badge bg-gradient-success">{{data.status}}</span></td>
               </tr>
           </tbody>
         </table>
     </div>
       </div>
   </div>
+     
+  <!-- </div> -->
+<!-- </div> -->
 
    <button type="button" class="open-button " @click="openForm" >Chat</button>
    <ChatBox v-show="ChatVisible" @close="closeChat" />
 
+  <!-- <div class="p-3 bg-secondary progress-bar-striped" style="min-height: 170px;">
+    <b-button variant="primary" @click="makeToast('primary')" class="mb-2">Primary</b-button>
+  </div> -->
 </div>
 </template>
 
@@ -80,7 +86,7 @@ import $ from "jquery";
     },
     mounted(){
        $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,
+         "responsive": false,"lengthChange": false,"ordering":false,
         columnDefs: [
       {
           className: 'dt-head-center dt-body-center'
@@ -316,7 +322,7 @@ import $ from "jquery";
   padding-left: 30px;
   padding-right:20px;
 }
-.badge1{
-  margin-right: 10px;
+span.badge1{
+  margin-right: 5px;
 }
 </style>

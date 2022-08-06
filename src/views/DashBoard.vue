@@ -193,7 +193,7 @@
                         <div class="card z-index-2 h-100">
                             <div class="card shadow-lg">
                                 <div class="card-body">
-
+                                    
                                 </div>
                             </div>
                         </div>
@@ -225,6 +225,7 @@
 <script>
     import line_chart from "@/components/LineChart.vue"
     import PieChart from "@/components/PieChart.vue"
+    
 export default{
 name: "DashBoard",
 components:{

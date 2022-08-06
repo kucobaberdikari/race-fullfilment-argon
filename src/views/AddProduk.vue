@@ -47,7 +47,7 @@
                   <div class="d-flex px-2 py-2">
                     <img src="../assets/images/blibli.70a677a.png" alt="" height="35px" width="35px">
                     <div class="ms-4">
-                      <p class="mb-0 h5 font-weight-bold">
+                      <p class="mb-0 mt-1 h5 font-weight-bold">
                         Blibli
                       </p>
                     </div>
@@ -97,9 +97,9 @@
               <!-- </div>          -->
           </div>
           <div class="card-body">
-              <table class="table table-bordered table-striped table-responsive-md" id="table1">
+              <table class="table table-striped table-responsive-md dt-center" id="table1">
                 <thead>
-                    <tr >
+                    <tr>
                       <th>Image</th>
                       <th>Name</th>
                       <th>SKU</th>
@@ -111,13 +111,13 @@
                 </thead>
                 <tbody>
                     <tr v-for="data in datas" :key="data.SKU">
-                      <td>{{data.Image}}</td>
-                      <td>{{data.Name}}</td>
-                      <td>{{data.SKU}}</td>
-                      <td ><span class="badge bg-gradient-info">{{data.store}}</span></td>
-                      <td>{{data.stock}}</td>
-                      <td>{{data.price}}</td>
-                      <td>{{data.created_date}}</td>
+                      <td><div class="ps-3">{{data.Image}}</div></td>
+                      <td><div class="ps-3">{{data.Name}}</div></td>
+                      <td><div class="ps-3">{{data.SKU}}</div></td>
+                      <td ><div class="ps-3"><span class="badge bg-gradient-info">{{data.store}}</span></div></td>
+                      <td><div class="ps-3">{{data.stock}}</div></td>
+                      <td><div class="ps-3">{{data.price}}</div></td>
+                      <td><div class="ps-3">{{data.created_date}}</div></td>
                     </tr>
                 </tbody>
               </table>
@@ -155,7 +155,7 @@ import $ from "jquery";
     },
     mounted(){
        $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,
+         "responsive": false,"lengthChange": false,"ordering":false
      });
     },  
     methods: {

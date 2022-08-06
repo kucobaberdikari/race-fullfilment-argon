@@ -20,7 +20,7 @@
         aria-hidden="true"
         id="iconSidenav"
       ></i>
-       <router-link class="m-0 navbar-brand" to="/">
+       <router-link class="m-0 navbar-brand" to="/dashboard">
         <img
           :src="
             this.$store.state.darkMode ||
@@ -34,10 +34,19 @@
         <span class="ms-2 font-weight-bold me-2 text-white h6 "><b>Race Fullfilment</b></span>
         
       </router-link>
-      <!-- <a class="navbar-brand m-0" href="/" >
-        <img src="../assets/images/newlogo.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white"><b>Race Fullfilment</b></span>
-      </a> -->
+            <!-- <a
+              href="#"
+              @click="toggleSidebar"
+              class="p-0 nav-link text-dark"
+              id="iconNavbarSidenav" 
+              
+            >
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line bg-dark"></i>
+                <i class="sidenav-toggler-line bg-dark"></i>
+                <i class="sidenav-toggler-line bg-dark"></i>
+              </div>
+            </a> -->
     </div>
     <hr class="horizontal dark mt-0">
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">

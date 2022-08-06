@@ -9,25 +9,25 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-responsive-md" id="table1">
+                        <table class="table table-striped table-responsive-md" id="table1">
                             <thead>
                                 <tr>
-                                    <th>SERVICE</th>
-                                    <th>IDENTIFIER</th>
-                                    <th>TYPE</th>
-                                    <th>LAST IMPORTED</th>
-                                    <th>LAST EXPORTED</th>
-                                    <th>SYNC STOCK</th>
+                                    <th class="dt-head-center">SERVICE</th>
+                                    <th class="dt-head-center">IDENTIFIER</th>
+                                    <th class="dt-head-center">TYPE</th>
+                                    <th class="dt-head-center">LAST IMPORTED</th>
+                                    <th class="dt-head-center">LAST EXPORTED</th>
+                                    <th class="dt-head-center">SYNC STOCK</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr v-for="data in datas" :key="data.identifier" >
-                                    <td>{{data.service}}</td>
-                                    <td>{{data.identifier}}</td>
-                                    <td>{{data.type}}</td>
-                                    <td>{{data.last_imp}}</td>
-                                    <td>{{data.last_exp}}</td>
-                                    <td>{{data.sync_stock}}</td>
+                                    <td class="dt-body-center">{{data.service}}</td>
+                                    <td class="dt-body-center">{{data.identifier}}</td>
+                                    <td class="dt-body-center">{{data.type}}</td>
+                                    <td class="dt-body-center">{{data.last_imp}}</td>
+                                    <td class="dt-body-center">{{data.last_exp}}</td>
+                                    <td class="dt-body-center">{{data.sync_stock}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -43,7 +43,7 @@
     import IntegrationDummy from "../components/data-dummy/Integration-Dummy.json";
     import $ from "jquery";
     export default{
-        name:'IntegrationS',
+        name:'IntegrationsPage',
         components:{},
         data(){
             return{
@@ -52,7 +52,11 @@
         },
         mounted(){
             $('#table1').dataTable({
-                "responsive": false,"lengthChange": false,
+                "responsive": false,"lengthChange": false,"ordering":false,
+                 columnDefs: [
+                            {
+                                className: 'dt-head-center dt-body-center'
+                            }]
             });
             },  
     }
