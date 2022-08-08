@@ -1,11 +1,12 @@
 <template>
-    <div class="card h-100">
-        <div class="pb-0 card-header mb-0">
-            <h6>Expired Stock's</h6>
-        </div>
+    <div class="card h-100 bg-white ">
+       
         <div class="p-3 card-body ">
-               <div class="chart">
-                <canvas id="pieChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+           <div class="pb-0 card-header border-0 mb-0 ps-3 bg-white">
+            <h6>Expired Stock's</h6>
+            </div>
+               <div class="chart mt-4">
+                <canvas id="pieChart" style="min-height: 300px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
             </div>
         </div>
     </div>

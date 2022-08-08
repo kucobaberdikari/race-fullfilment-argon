@@ -25,7 +25,7 @@
               </tr>
           </thead>
           <tbody>
-              <tr v-for="(data,index) in datas" :key="data.id">
+              <tr v-for="(data,index) in Inbound_Dummy" :key="data.id">
                 <td class="dt-body-center">{{index+1}}</td>
                 <td class="dt-body-center" v-if="data.status === 'Menunggu Penerimaan'"><span class="badge bg-gradient-warning badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
                 <td class="dt-body-center" v-else-if="data.status === 'Menunggu Pengiriman'"><span class="badge bg-gradient-secondary badge1"><i class="far fa-dot-circle"></i></span>{{data.kd_inbound}}</td>
@@ -62,7 +62,7 @@
 import ModalAdd from "../components/ModalAdd.vue";
 // import ToastrNotif from '../components/ToastrNotif.vue';
 import ChatBox from "@/components/ChatBox.vue";
-import Datadummy from "../components/data-dummy/Inbond-Dummy.json";
+import axios from 'axios'
 import $ from "jquery";
   export default {
     name: 'InboundPage',
@@ -77,7 +77,7 @@ import $ from "jquery";
         ChatVisible: false,
         isHidden: false,
         isShow:true,
-        datas:Datadummy,
+        Inbound_Dummy:[]
       };
 
     },
@@ -93,6 +93,7 @@ import $ from "jquery";
       }
     ],
      });
+      this.load()
     },
     methods: {
       showModal() {
@@ -129,6 +130,13 @@ import $ from "jquery";
         //  url: 'https://jaja.i qd/produk/nanti-kita-sambat-tentang-hari-ini-25',
           })
       },
+             load(){
+        axios.get('http://localhost:3000/Inbound_Dummy').then(res => {
+        this.Inbound_Dummy = res.data //respon dari rest api dimasukan ke users
+      }).catch ((err) => {
+        console.log(err);
+      })
+    }
     },
   };
   

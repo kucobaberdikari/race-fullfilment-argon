@@ -35,7 +35,7 @@
           
         </div>
         <ul class="navbar-nav justify-content-end">
-          <li class="nav-item d-flex me-2 align-items-center">
+          <!-- <li class="nav-item d-flex me-2 align-items-center">
             <router-link
               :to="{ name: 'Signin' }"
               class="px-0 nav-link font-weight-bold text-dark"
@@ -50,7 +50,7 @@
               >
               <span v-else class="d-sm-inline d-none">Sign In</span>
             </router-link>
-          </li>
+          </li> -->
           <li class="nav-item d-xl-none ps-3 me-2 d-flex align-items-center">
             <a
               href="#"
@@ -122,7 +122,6 @@
                   <div class="py-1 d-flex">
                     <div class="my-auto">
                       <img
-                        
                         class="avatar avatar-sm bg-gradient-dark me-3"
                         alt="logo spotify"
                       />

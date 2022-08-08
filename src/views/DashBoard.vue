@@ -94,7 +94,7 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-lg-6 mb-lg">
-                        <div class="card z-index-2 h-100">
+                        <div class="card z-index-2 h-auto">
                             <div class="card shadow-lg">
                                 <div class="card-header pb-0">
                                     <div class="row">
@@ -190,11 +190,11 @@
                         </div>
                     </div>
                     <div class="col-lg-6 mb-lg">
-                        <div class="card z-index-2 h-100">
-                            <div class="card shadow-lg">
-                                <div class="card-body">
-                                    
-                                </div>
+                        <div class="card z-index-2 h-75">
+                            <div class="card shadow-lg px-3 py-3">
+                                <!-- <div class="card-body"> -->
+                                    <AddGoogleMap/>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
@@ -203,17 +203,14 @@
                     <div class="col-lg-7 mb-lg">
                         <div class="card z-index-2 h-100">
                             <div class="card shadow-lg">
-                                <div class="card-body">
+
                                     <line_chart/>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 mb-lg">
                         <div class="card z-index-2 h-100">
-                            
-                                    <PieChart/>
-                               
+                            <PieChart/>
                         </div>
                     </div>
                 </div>
@@ -225,12 +222,13 @@
 <script>
     import line_chart from "@/components/LineChart.vue"
     import PieChart from "@/components/PieChart.vue"
-    
+    import AddGoogleMap from "@/components/AddGoogleMap.vue"
 export default{
 name: "DashBoard",
 components:{
     line_chart,
-    PieChart
+    PieChart,
+    AddGoogleMap
 },
 data(){
     return{

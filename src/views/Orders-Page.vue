@@ -19,7 +19,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="(data,index) in data" :key="data.id">
+                                    <tr v-for="(data,index) in Orders_Dummy" :key="data.id">
                                         <td  >{{index+1}}</td>
                                         <td>{{data.invoice}}</td>
                                         <td>{{data.total}}</td>
@@ -164,14 +164,15 @@
 </template>
 
 <script>
-import OrdersDummy from "../components/data-dummy/Orders-Dummy.json";
+// import OrdersDummy from "../components/data-dummy/Orders-Dummy.json";
+import axios from "axios";
 import $ from "jquery";
 export default{
     name: 'OrdersPage',
     components: {},
     data(){
         return{
-            data:OrdersDummy,
+            Orders_Dummy:[],
         }
     },
     mounted(){
@@ -193,38 +194,44 @@ export default{
        $('#table6').dataTable({
          "responsive": false,"lengthChange": false,
      });
-      
+      this.load()
     },
    computed:{
         filterstatusInbound(){
-            return this.data.filter(function (data){
-                return data.status =='Inbound'
+            return this.Orders_Dummy.filter(function (Orders_Dummy){
+                return Orders_Dummy.status =='Inbound'
             })
         },
         filterstatusOutbound(){
-            return this.data.filter(function (data){
-                return data.status =='Outbound'
+            return this.Orders_Dummy.filter(function (Orders_Dummy){
+                return Orders_Dummy.status =='Outbound'
             })
         },
         filterstatusDikirim(){
-            return this.data.filter(function (data){
-                return data.status =='Dikirim'
+            return this.Orders_Dummy.filter(function (Orders_Dummy){
+                return Orders_Dummy.status =='Dikirim'
             })
         },
         filterstatusProses(){
-            return this.data.filter(function (data){
-                return data.status =='Proses'
+            return this.Orders_Dummy.filter(function (Orders_Dummy){
+                return Orders_Dummy.status =='Proses'
             })
         },
         filterstatusSampai(){
-            return this.data.filter(function (data){
-                return data.status =='Sampai'
+            return this.Orders_Dummy.filter(function (Orders_Dummy){
+                return Orders_Dummy.status =='Sampai'
             })
         },
 
    },
    methods: {
-    
+        load(){
+            axios.get('http://localhost:3000/Orders_Dummy').then(response =>{
+                this.Orders_Dummy = response.data
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
    }
 }
 </script>

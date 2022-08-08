@@ -122,7 +122,7 @@
                            </tr>
                         </thead>
                         <tbody>
-                           <tr v-for="data in datas" :key="data.id" id="table1">
+                           <tr v-for="data in Outbound_Dummy" :key="data.id" id="table1">
                               <td class="dt-body-center">{{data.id}}</td>
                               <td class="dt-body-center">{{data.kd_inbound}}</td>
                               <td class="dt-body-center">{{data.costumer}}</td>
@@ -145,11 +145,17 @@
 
 
 <script>
-import Outbonddummy from "../components/data-dummy/Outbond-Dummy.json";
+// import Outbonddummy from "../components/data-dummy/Outbond-Dummy.json";
 import $ from "jquery";
+import axios from "axios";
 export default{
     name: 'OutboundPage',
     components: {}, 
+    data(){
+      return{
+         Outbound_Dummy:[]
+      }
+    },
     mounted(){
        $('#table1').dataTable({
          "responsive": false,"lengthChange": false,"ordering":false,
@@ -158,11 +164,16 @@ export default{
           className: 'dt-head-center dt-body-center'
       }]
      });
+      this.load()
     },  
-    data(){
-      return{
-         datas:Outbonddummy
-      }
+    methods: {
+      load(){
+        axios.get('http://localhost:3000/Outbound_Dummy').then(res => {
+        this.Outbound_Dummy = res.data //respon dari rest api dimasukan ke users
+      }).catch ((err) => {
+        console.log(err);
+      })
+    }
     }
 }
 </script>

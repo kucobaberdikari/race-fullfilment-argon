@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class="pb-0 card-header mb-0">
+        <div class="pb-0 card-header mb-0 bg-white">
             <h6>{{ title }}</h6>
             <p class="text-sm">
                 <i class="fa fa-arrow-up text-success"></i>
