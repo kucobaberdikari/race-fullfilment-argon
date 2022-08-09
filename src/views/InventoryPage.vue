@@ -137,8 +137,8 @@
          </thead> 
          <tbody>
             <tr v-for="(data,index) in Inventory_Dummy" :key="data.id">
-               <td class="ps-2  ">{{index+1}}</td>
-               <td class="w-30">
+              <td class="ps-2  ">{{index+1}}</td>
+              <td class="w-30">
                 <div class="px-2 py-1 d-flex align-items-center">
                    <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
                       <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
@@ -149,58 +149,97 @@
                   </div>
                 </div>
 
-               </td>
-               <td><div class="ps-3">{{data.barcode}}</div></td>
-               <td><div class="ps-4">{{data.SKU}}</div></td>
-               <td><div class="ps-4">{{data.stock}}</div></td>
-               <td>
-                 <b-button id="show-modaledit" @click="$bvModal.show('bv-modal-edit')" class="btn bg-gradient-success me-2">Edit Seller</b-button>
-                <button class="btn btn-danger ">Delete</button>
+              </td>
+              <td><div class="ps-3">{{data.barcode}}</div></td>
+              <td><div class="ps-4">{{data.SKU}}</div></td>
+              <td><div class="ps-4">{{data.stock}}</div></td>
+              <td>
+              <b-button id="show-modaledit" @click="ModalEdit(data.id)" class="btn bg-gradient-success me-2" >Edit Seller</b-button>
+              <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button>
                </td>
             </tr>
          </tbody>
       </table>
     </div>
     </div>
-    <b-modal id="bv-modal-add" hide-footer>
+    <b-modal id="bv-modal-add" size="lg" hide-backdrop hide-footer >
     <template #modal-title>
-      Using <code>$bvModal</code> Methods
+     Add Seller
     </template>
-    <div class="d-block text-center">
-      <h3>Hello From This Modal!</h3>
-    </div>
-    <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-add')">Close Me</b-button>
+    <div class="d-block justify-items-start ms-1 px-0">
+        <div class="form-group mb-1" >
+          <span for="seller" class="col-md-9 text-dark ms-3 "><b>Seller</b></span>
+          <div class="col-md-12">
+            <input type="text" name="seller" id="seller" class="form-control form-control-default invalid" >
+          </div>
+        </div>
+        <div class="form-group mb-1" >
+          <span for="seller" class="col-md-9 text-dark ms-3"><b>Telepon</b></span>
+          <div class="col-md-12">
+            <input type="text" name="seller" id="seller" class="form-control form-control-default invalid" >
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="barcode" class="col-md-9 text-dark ms-3"><b>Barcode</b></span>
+          <div class="col-md-12">
+            <input type="text" name="barcode" id="barcode" class="form-control form-control-default invalid" >
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="sku" class="col-md-9 text-dark ms-3"><b>SKU</b></span>
+          <div class="col-md-12">
+            <input type="text" name="sku" id="sku" class="form-control form-control-default invalid" >
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="stock" class="col-md-4 text-dark ms-3"><b>Stock</b></span>
+          <div class="col-md-12">
+            <input type="text" name="stock" id="seller.stock" class="form-control form-control-default invalid" >
+          </div>
+        </div>
+      </div>
+   <div class="modal-footer mt-1 align-items-end border-0 py-1">
+     <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-add')">Close Me</b-button>
+   </div>
     </b-modal>
-    <b-modal id="bv-modal-edit" size="lg" hide-backdrop hide-footer>
-    <template #modal-title>Edit Data Seller</template>
-    <div class="d-block justify-items-start ms-4">
-      <div class="form-group">
-        <p for="seller" class="col-md-9 text-dark">seller</p>
-        <div class="col-md-12">
-          <input type="text" name="seller" id="seller" class="form-controll">
+
+    <b-modal ref="modaledit" size="lg" hide-backdrop hide-footer v-for="seller in seller" :key="seller.id">
+      <template #modal-title>Edit Data Seller</template>
+      <div class="d-block justify-items-start ms-1 px-0">
+        <div class="form-group mb-1" >
+          <span for="seller" class="col-md-9 text-dark ms-3"><b>Seller</b></span>
+          <div class="col-md-12">
+            <input type="text" name="seller" id="seller.id" class="form-control form-control-default invalid" value="seller.id">
+          </div>
+        </div>
+        <div class="form-group mb-1" >
+          <span for="seller" class="col-md-9 text-dark ms-3"><b>Telepon</b></span>
+          <div class="col-md-12">
+            <input type="text" name="seller" id="seller.telepon" class="form-control form-control-default invalid" value="seller.telepon">
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="barcode" class="col-md-9 text-dark ms-3"><b>Barcode</b></span>
+          <div class="col-md-12">
+            <input type="text" name="barcode" id="seller.barcode" class="form-control form-control-default invalid" value="seller.barcode">
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="sku" class="col-md-9 text-dark ms-3"><b>SKU</b></span>
+          <div class="col-md-12">
+            <input type="text" name="sku" id="seller.SKU" class="form-control form-control-default invalid" value="seller.SKU">
+          </div>
+        </div>
+        <div class="form-group mb-1">
+          <span for="stock" class="col-md-4 text-dark ms-3"><b>Stock</b></span>
+          <div class="col-md-12">
+            <input type="text" name="seller.stock" id="stock" class="form-control form-control-default invalid" value="seller.stock">
+          </div>
         </div>
       </div>
-      <div class="form-group">
-        <p for="barcode" class="col-md-9 text-dark">barcode</p>
-        <div class="col-md-12">
-          <input type="text" name="barcode" id="barcode" class="form-controll">
-        </div>
+      <div class="modal-footer mt-1 align-items-end border-0 py-1">
+        <button class="btn bg-gradient-success">Update</button>
       </div>
-      <div class="form-group">
-        <p for="sku" class="col-md-9 text-dark">sku</p>
-        <div class="col-md-12">
-          <input type="text" name="sku" id="sku" class="form-controll">
-        </div>
-      </div>
-      <div class="form-group">
-        <p for="stock" class="col-md-4 text-dark">stock</p>
-        <div class="col-md-12">
-          <input type="text" name="stock" id="stock" class="form-controll">
-        </div>
-      </div>
-    </div>
-    
-    
     </b-modal>
 </div>
 
@@ -219,6 +258,8 @@ export default{
         return{
           // datas:Inventorydummy,
             Inventory_Dummy:[],
+            seller:[]
+
         }
     },
     mounted(){
@@ -232,14 +273,41 @@ export default{
     methods:{
        load(){
         axios.get('http://localhost:3000/Inventory_Dummy').then(res => {
-        this.Inventory_Dummy = res.data //respon dari rest api dimasukan ke users
+        this.Inventory_Dummy = res.data 
       }).catch ((err) => {
         console.log(err);
-                $('#table1').dataTable({
+          $('#table1').dataTable({
           "responsive": false,"lengthChange": false, 	
-  "ordering": false,
+          "ordering": false,
           
       });
+      })
+    }, 
+    // getseller(){
+    //   axios.get('http://localhost:3000/Inventory_Dummy').then(res => {
+    //     this.seller = res.data;
+    //   })
+    //   .catch(err =>{console.log(err);})
+    // },
+    ModalEdit(id){
+      this.$refs['modaledit'].show();
+      axios.get(`http://localhost:3000/Inventory_Dummy/${id}`)
+      .then(response => {
+        this.seller = response.data;
+       
+      })
+      .catch(function(error){
+        console.log(error.response)
+      })
+    },
+    deleteseller(id){
+      axios.delete(`http://localhost:3000/Inventory_Dummy/${id}`)
+      .then(response => {
+        this.seller = response.data;
+       window.location.reload()
+      })
+      .catch(function(error){
+        console.log(error.response)
       })
     }
     }
