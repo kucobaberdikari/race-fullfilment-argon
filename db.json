@@ -720,5 +720,15 @@
       "order_date": "21-12-2019",
       "created": "20-12-2019"
     }
+  ],
+  "user_dummy":[
+    {
+      "id": 1,
+      "nama": "muhammad nur",
+      "username": "nur",
+      "password": "",
+      "email": "kucobaberdikari@gmail.com"
+
+    }
   ]
 }
