@@ -165,28 +165,28 @@
   ],
   "Inventory_Dummy": [
     {
-        "id" :1 ,
-        "seller" : "Agen Depok Bersih",
-        "telepon" :"0828775983",
-        "barcode" : "No Barcode" ,
-        "SKU" :20 ,
-        "stock" :1820 
+      "id": 1,
+      "seller": "Agen Depok Bersih12",
+      "telepon": "0828775983",
+      "barcode": "No Barcode",
+      "SKU": 20,
+      "stock": 1820
     },
     {
-        "id" :2 ,
-        "seller" : "Berkah Sentosa",
-        "telepon" :"0828774323",
-        "barcode" : "No Barcode" ,
-        "SKU" :22 ,
-        "stock" :2200 
+      "id": 2,
+      "seller": "Berkah Sentosa",
+      "telepon": "0828774323",
+      "barcode": "No Barcode",
+      "SKU": 22,
+      "stock": 2200
     },
     {
-        "id" : 3 ,
-        "seller" : "Agen Jaya",
-        "telepon" :"08287756545",
-        "barcode" : "No Barcode" ,
-        "SKU" : 15 ,
-        "stock" : 1225 
+      "id": 3,
+      "seller": "Agen Jaya",
+      "telepon": "08287756545",
+      "barcode": "No Barcode",
+      "SKU": 15,
+      "stock": 1225
     },
     {
       "id": 4,
@@ -227,6 +227,30 @@
       "barcode": "No Barcode",
       "SKU": 10,
       "stock": 585
+    },
+    {
+      "id": 9,
+      "seller": "Agen Depok Bersih2",
+      "telepon": "0822546952",
+      "barcode": "No Barcode",
+      "SKU": "2255",
+      "stock": "200"
+    },
+    {
+      "id": 10,
+      "seller": "Agen Depok Bersih3",
+      "telepon": "0255852",
+      "barcode": "No Barcode",
+      "SKU": "2255",
+      "stock": "65"
+    },
+    {
+      "id": 11,
+      "seller": "Agen Depok Bersih2",
+      "telepon": "02152",
+      "barcode": "No Barcode",
+      "SKU": "2255",
+      "stock": "200"
     }
   ],
   "Orders_Dummy": [
@@ -721,14 +745,13 @@
       "created": "20-12-2019"
     }
   ],
-  "user_dummy":[
+  "user_dummy": [
     {
       "id": 1,
       "nama": "muhammad nur",
       "username": "nur",
       "password": "",
       "email": "kucobaberdikari@gmail.com"
-
     }
   ]
 }

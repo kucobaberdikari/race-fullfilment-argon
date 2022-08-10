@@ -170,7 +170,8 @@
     </template>
     <div class="d-block justify-items-start ms-1 px-0">
       <form v-on:submit.prevent="submitform">
-      <input type="hidden" name="id" v-model="form.id">
+      <!-- <span for="ID" class="col-md-9 text-dark ms-3 "><b>ID</b></span> -->
+      <input type="hidden" name="id" v-model="form.id" class="form-control form-control-default invalid">
         <div class="form-group mb-1" >
           <span for="seller" class="col-md-9 text-dark ms-3 "><b>Seller</b></span>
           <div class="col-md-12">
@@ -204,7 +205,7 @@
       </form>
     </div>
    <div class="modal-footer mt-1 align-items-end border-0 py-1">
-    <button class="btn bg-gradient-success">Create</button>
+    <button class="btn bg-gradient-success" type="submit" @click="submitform">Create</button>
      <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-add')">Close Me</b-button>
    </div>
     </b-modal>
@@ -213,7 +214,8 @@
       <template #modal-title>Edit Data Seller</template>
       <div class="d-block justify-items-start ms-1 px-0">
        <form  method="post" v-on:submit.prevent="editform">
-           <div class="form-group mb-1" >
+          <input type="hidden" name="id" v-model="form.id">
+          <div class="form-group mb-1" >
             <span for="seller" class="col-md-9 text-dark ms-3"><b>Seller</b></span>
             <div class="col-md-12">
               <input type="text" name="seller" id="seller.id" class="form-control form-control-default invalid" v-model="form.seller">
@@ -247,7 +249,7 @@
       </div>
       <!-- <div class="modal-footer mt-1 align-items-end border-0 py-1 "> -->
        <div class="row mt-1 align-items-end border-0 py-1 pe-2  ">
-         <button class="btn bg-gradient-success w-25 me-1" @click="update(form)">Update</button>
+         <button class="btn bg-gradient-success w-25 me-1" @click="editform(form.id)">Update</button>
         <b-button class="mt-3 ms-1 w-25" block @click="$bvModal.hide('modaledit')">Close Me</b-button>
        </div>
       <!-- </div> -->
@@ -255,7 +257,6 @@
 </div>
 
 </template>
-
 
 <script>
 // import Inventorydummy from "../components/data-dummy/Inventory-Dummy.json";
@@ -311,10 +312,12 @@ export default{
         console.log(error.response)
       })
     },
-    updateseller(){
-      axios.put('http://localhost:3000/Inventory_Dummy/${id}', form)
+    editform(id){
+      axios.put(`http://localhost:3000/Inventory_Dummy/${id}`,this.form)
       .then(response => {
+        this.form = response.data;
        console.log(response);
+       window.location.reload()
       })
       .catch(err =>{console.log(err);})
     },
@@ -336,20 +339,3 @@ export default{
 }
 </script>
 
-<style scoped>
-  .row{
-    margin:0;
-    padding: 0;
-  }
-  /* .row1{
-    padding-bottom: 30px;
-  } */
-  .col-sm-4 .border .tes{
-    padding-left: 0;
-    text-align: left;
-    
-  }
-  .card{
-    border-radius: 15px;
-  }
-</style>
