@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 container-fluid" >                
+  <div class="py-4 container-fluid">                
     <div class="row ">
       <div class="col-lg-4 col-md-8 col-12">
         <div class="card">
@@ -120,49 +120,75 @@
         </div>
     </div>
     <div class="row mt-4 ms-2 me-2">
-       <div class="card ">
-        <div class="card-header justify-items-start bg-white px-0 pb-2 pt-3">
-           <b-button id="show-modaladd" @click="$bvModal.show('bv-modal-add')" class="btn bg-gradient-success ms-3">Add Seller</b-button>
+      <div class="card ">
+        <div class="card-header my-0 py-0 px-0 bg-white ">
+          <div class="row mx-0 ">
+            <div class="d-flex justify-content-md-start col-6 col-md-6">
+            <b-button id="show-modaladd" @click="$bvModal.show('bv-modal-add')" class="btn bg-gradient-success ms-3">Add Seller</b-button>
+            </div>
+          <div class="d-flex justify-content-md-end col-6 col-md-6 mb-3">
+            <div class="input-group w-50 pe-1">
+                  <input type="text" class="form-control border-1" placeholder="   search..." v-model="filter" />
+              </div>
+          </div>
+          </div>
         </div>
-        <div class="table-responsive">
-          <table class="table  table-striped table-responsive-md mt-3 align-items-center" id="table1">
-            <thead>
-                <tr>
-                  <th>No</th>
-                  <th>Seller</th>
-                  <th>Tipe Barcode</th>
-                  <th>Qty SKU</th>
-                  <th>Qty Stock</th>
-                  <th>Action</th>
-                </tr>
-            </thead> 
-            <tbody>
-                <tr v-for="(data,index) in Inventory_Dummy" :key="data.id">
-                  <td class="ps-2  ">{{index+1}}</td>
-                  <td class="w-30">
-                    <div class="px-2 py-1 d-flex align-items-center">
-                      <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
-                          <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table  table-striped table-responsive-md mt-3 align-items-center" id="table1">
+              <thead>
+                  <tr>
+                    <th>No</th>
+                    <th @click="sort('seller')">Seller</th>
+                    <th >Tipe Barcode</th>
+                    <th @click="sort('SKU')">Qty SKU</th>
+                    <th @click="sort('stock')">Qty Stock</th>
+                    <th>Action</th>
+                  </tr>
+              </thead> 
+              <tbody>
+                  <tr v-for="(data,index) in Inventory_Dummy" :key="data.id">
+                    <td class="ps-2  ">{{index+1}}</td>
+                    <td class="w-30">
+                      <div class="px-2 py-1 d-flex align-items-center">
+                        <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
+                            <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-4">
+                          <p class="mb-0 text-lg font-weight-bold">{{data.seller}}</p>
+                          <a href="#" class="mb-0 text-sm">{{data.telepon}}</a>
+                        </div>
                       </div>
-                      <div class="ms-4">
-                        <p class="mb-0 text-lg font-weight-bold">{{data.seller}}</p>
-                        <a href="#" class="mb-0 text-sm">{{data.telepon}}</a>
-                      </div>
-                    </div>
 
-                  </td>
-                  <td><div class="ps-3">{{data.barcode}}</div></td>
-                  <td><div class="ps-4">{{data.SKU}}</div></td>
-                  <td><div class="ps-4">{{data.stock}}</div></td>
-                  <td>
-                  <b-button id="show-modaledit" @click="ModalEdit(data)" class="btn bg-gradient-success me-2" >Edit Seller</b-button>
-                  <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button>
-                  </td>
-                </tr>
-            </tbody>
-          </table>
+                    </td>
+                    <td><div class="ps-3">{{data.barcode}}</div></td>
+                    <td><div class="ps-4">{{data.SKU}}</div></td>
+                    <td><div class="ps-4">{{data.stock}}</div></td>
+                    <td>
+                    <b-button id="show-modaledit" @click="ModalEdit(data)" class="btn bg-gradient-success me-2" >Edit Seller</b-button>
+                    <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-    </div>
+        <!-- <div class="card-footer px-0 py-0">
+         <div class="row mx-0 ">
+            <div class="d-flex justify-content-md-start col-9 col-md-9 pb-0 pt-3">
+           <P>PAGE :  &nbsp;</P> {{currentPage}} &nbsp;&nbsp;&nbsp;
+           <P>SORT :  &nbsp;</P> {{currentSort}}  &nbsp;&nbsp;&nbsp;
+           <P>DIR  :  &nbsp;</P> {{currentSortDir}}
+            </div>
+          <div class="d-flex justify-content-md-end col-3 col-md-3 py-0 mb-2 mx-0">
+            <div class="row pb-3 my-0">
+              <div class="col-sm-6"><button class="btn bg-gradient-info" @click="prevPage">Previous</button></div>
+              <div class="col-sm-6"><button class="btn bg-gradient-info" @click="nextPage">Next</button></div>
+            </div>
+          </div>
+          </div>
+        </div> -->
+      </div>
     </div>
     <b-modal id="bv-modal-add" size="lg" hide-backdrop hide-footer >
     <template #modal-title>
@@ -261,7 +287,7 @@
 <script>
 // import Inventorydummy from "../components/data-dummy/Inventory-Dummy.json";
 import "jquery/dist/jquery.min.js";
-import $ from "jquery";
+// import $ from "jquery";
 import axios from 'axios'
 export default{
     name: 'InventoryPage',
@@ -278,28 +304,32 @@ export default{
               barcode:'',
               SKU:'',
               stock:'',
-            },
+              },
+            // currentSort:'seller',
+            // currentSortDir:'asc',
+            // pageSize:3,
+            // currentPage:1,
+            // filter:''
         }
     },
-    mounted(){
-        $('#table1').dataTable({
-          "responsive": false,"lengthChange": false, 	
-  "ordering": false,
+    // mounted(){
+    //     $('#table1').dataTable({
+    //       "responsive": false,"lengthChange": false, 	
+    //     "ordering": false,
           
-      });  
-     this.load()
+    //   });  
+    //  this.load()
+    // },
+    created() {
+      this.load();
     },
+
     methods:{
        load(){
         axios.get('http://localhost:3000/Inventory_Dummy').then(res => {
         this.Inventory_Dummy = res.data 
       }).catch ((err) => {
         console.log(err);
-          $('#table1').dataTable({
-          "responsive": false,"lengthChange": false, 	
-          "ordering": false,
-          
-      });
       })
     }, 
     submitform(){
@@ -334,8 +364,37 @@ export default{
       .catch(function(error){
         console.log(error.response)
       })
-    }
-    }
+    },
+    // sort:function(s) {
+    //   //if s == current sort, reverse
+    //   if(s === this.currentSort) {
+    //     this.currentSortDir = this.currentSortDir==='asc'?'desc':'asc';
+    //   }
+    //   this.currentSort = s;
+    // },
+    // nextPage:function() {
+    //   if((this.currentPage*this.pageSize) < this.Inventory_Dummy.length) this.currentPage++;
+    // },
+    // prevPage:function() {
+    //   if(this.currentPage > 1) this.currentPage--;
+    // }
+
+    },
+  // computed:{
+  //   sortedCats:function() {
+  //     return this.Inventory_Dummy.sort((a,b) => {
+  //       let modifier = 1;
+  //       if(this.currentSortDir === 'desc') modifier = -1;
+  //       if(a[this.currentSort] < b[this.currentSort]) return -1 * modifier;
+  //       if(a[this.currentSort] > b[this.currentSort]) return 1 * modifier;
+  //       return 0;
+  //     }).filter((row, index) => {
+  //       let start = (this.currentPage-1)*this.pageSize;
+  //       let end = this.currentPage*this.pageSize;
+  //       if(index >= start && index < end) return true;
+  //     });
+  //   }
+  // }
 }
 </script>
 

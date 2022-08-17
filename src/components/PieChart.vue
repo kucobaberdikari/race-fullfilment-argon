@@ -20,17 +20,15 @@ import $ from "jquery";
         mounted(){
                 var donutData        = {
       labels: [
-          'Chrome',
-          'IE',
-          'FireFox',
-          'Safari',
-          'Opera',
-          'Navigator',
+          'Fresh',
+          'Warning',
+          'Expirred',
+         
       ],
       datasets: [
         {
-          data: [700,500,400,600,300,100],
-          backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+          data: [450,200,50,],
+          backgroundColor : ['#f56954', '#00a65a', '#f39c12', ],
         }
       ]
     }

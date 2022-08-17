@@ -2,8 +2,7 @@
 <div class="py-4 container-fluid">
   <div class="row">
      <div class="card">
-    <div class="card-header pb-1 justify-content-end">
-        <!-- <div class="row row1"> -->
+    <!-- <div class="card-header pb-1 justify-content-end">
           <button type="button" class="btn btn-info" @click="showModal">Open Modal!  </button>
               <ModalAdd v-show="isModalVisible" @close="closeModal" >
                 <template v-slot:header></template>
@@ -11,10 +10,10 @@
                 <template v-slot:footer></template>
               </ModalAdd>
               <button class="btn btn-info" v-on:click="onClick()" >Notification12</button>
-        <!-- </div>          -->
-    </div>
+    </div> -->
     <div class="card-body">
-        <table class="table  table-striped table-responsive-md" id="table1">
+      <div class="table-responsive">
+          <table class="table" id="table1">
           <thead>
               <tr class="">
                 <th class="dt-head-center">No</th>
@@ -40,6 +39,7 @@
               </tr>
           </tbody>
         </table>
+      </div>
     </div>
       </div>
   </div>
@@ -47,8 +47,8 @@
   <!-- </div> -->
 <!-- </div> -->
 
-   <button type="button" class="open-button " @click="openForm" >Chat</button>
-   <ChatBox v-show="ChatVisible" @close="closeChat" />
+   <!-- <button type="button" class="open-button " @click="openForm" >Chat</button>
+   <ChatBox v-show="ChatVisible" @close="closeChat" /> -->
 
   <!-- <div class="p-3 bg-secondary progress-bar-striped" style="min-height: 170px;">
     <b-button variant="primary" @click="makeToast('primary')" class="mb-2">Primary</b-button>
@@ -59,17 +59,17 @@
 <script>
 
 
-import ModalAdd from "../components/ModalAdd.vue";
+// import ModalAdd from "../components/ModalAdd.vue";
 // import ToastrNotif from '../components/ToastrNotif.vue';
-import ChatBox from "@/components/ChatBox.vue";
+// import ChatBox from "@/components/ChatBox.vue";
 import axios from 'axios'
-import $ from "jquery";
+// import $ from "jquery";
   export default {
     name: 'InboundPage',
     components: {
-      ModalAdd,
+      // ModalAdd,
       // ToastrNotif,
-      ChatBox,
+      // ChatBox,
     },
     data() {
       return {
@@ -85,14 +85,14 @@ import $ from "jquery";
       this.onClick()
     },
     mounted(){
-       $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,"ordering":false,
-        columnDefs: [
-      {
-          className: 'dt-head-center dt-body-center'
-      }
-    ],
-     });
+    //    $('#table1').dataTable({
+    //      "responsive": false,"lengthChange": false,"ordering":false,
+    //     columnDefs: [
+    //   {
+    //       className: 'dt-head-center dt-body-center'
+    //   }
+    // ],
+    //  });
       this.load()
     },
     methods: {

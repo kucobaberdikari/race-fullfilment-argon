@@ -1,16 +1,15 @@
 <template>
-   <div class="py-4 container-fluid">
+   <div class="py-3 container-fluid">
         <div class="row">
             <div class="col-1g-12">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="card">
-                            <div class="card-body p-3">
+                    <div class="col-lg-3 col-md-6 col-12 ">
+                        <div class="card px-2 border-radius-xl">
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
                                             <p class="text-sm-mb-0 text-uppercase font-weight-bolder">Request Pickup</p>
-                                            <h6 class="font-weight-bolder">12</h6>
+                                            <h5 class="font-weight-bolder">12</h5>
                                             <p class="mb-0">
                                                 
                                             </p>
@@ -22,12 +21,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
-                         <div class="card">
-                            <div class="card-body p-3">
+                         <div class="card px-2">
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
@@ -44,12 +41,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
-                         <div class="card">
-                            <div class="card-body p-3">
+                         <div class="card px-2">
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
@@ -66,12 +61,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
-                         <div class="card">
-                            <div class="card-body p-3">
+                         <div class="card px-2">
                                 <div class="row">
                                     <div class="col-8">
                                         <div class="numbers">
@@ -88,11 +81,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4">
+                <div class="row mt-2">
                     <div class="col-lg-6 mb-lg">
                         <div class="card z-index-2 h-auto">
                             <div class="card shadow-lg">

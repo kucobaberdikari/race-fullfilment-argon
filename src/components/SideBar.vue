@@ -31,7 +31,7 @@
           class="navbar-brand-img h-100"
           alt="main_logo"
         />
-        <span class="ms-2 font-weight-bold me-2 text-white h6 "><b>Race Fullfilment</b></span>
+        <span class="ms-2 font-weight-bold mt-4 text-white h5">Race Fullfilment</span>
         
       </router-link>
             <!-- <a

@@ -12,6 +12,11 @@ import ProductPage from '@/views/Product-Page.vue'
 import trackingPage from '@/views/tracking-Page.vue'
 import IntegrationsPage from '@/views/IntegrationsPage.vue'
 import IntegrationAdd from '@/views/IntegrationAddPage.vue'
+import SignIn from '@/views/SignIn.vue'
+import SignUp from '@/views/SignUp.vue'
+
+ import DashboardLayout from "@/layouts/DashboardLayout.vue"
+ import PublicLayout from "@/layouts/PublicLayout.vue"
 
 Vue.use(VueRouter)
 
@@ -35,60 +40,82 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
   {
-    path: '/dashboard',
-    name: 'DashBoard',
-    component: DashBoard 
+    path: '',
+    component: DashboardLayout,
+    children: [
+            {
+              path: 'dashboard',
+              name: 'DashBoard',
+              component: DashBoard 
+            },
+            {
+              path: 'produk/add',
+              name: 'AddProduk',
+              component: AddProduk
+            },
+            {
+              path: 'inbound',
+              name: 'InboundPage',
+              component: InboundPage 
+            },
+            {
+              path: 'inventory',
+              name: 'InventoryPage',
+              component:InventoryPage 
+            },
+            {
+              path: 'orders',
+              name: 'Orderspage',
+              component: OrdersPage
+            },
+            {
+              path: 'outbound',
+              name: 'OutboundPage',
+              component: OutboundPage
+            },
+            {
+              path: 'produk',
+              name: 'ProductPage',
+              component: ProductPage
+            },
+            {
+              path: 'tracking',
+              name: 'trackingPage',
+              component: trackingPage
+            },
+            {
+              path: 'integrations',
+              name: 'IntegrationsPage',
+              component: IntegrationsPage
+            },
+            {
+              path: 'integrations/add',
+              name: 'IntegrationAdd',
+              component: IntegrationAdd
+            },
+    ]
   },
-  {
-    path: '/produk/add',
-    name: 'AddProduk',
-    component: AddProduk
-  },
+
   // {
   //   path: '/:patMatch(.*)*',
   //   name: 'PageNotFound',
   //   component: PageNotFound
   // },
+
   {
-    path: '/inbound',
-    name: 'InboundPage',
-    component: InboundPage 
-  },
-  {
-    path: '/inventory',
-    name: 'InventoryPage',
-    component:InventoryPage 
-  },
-  {
-    path: '/orders',
-    name: 'Orderspage',
-    component: OrdersPage
-  },
-  {
-    path: '/outbound',
-    name: 'OutboundPage',
-    component: OutboundPage
-  },
-  {
-    path: '/produk',
-    name: 'ProductPage',
-    component: ProductPage
-  },
-  {
-    path: '/tracking',
-    name: 'trackingPage',
-    component: trackingPage
-  },
-  {
-    path: '/integrations',
-    name: 'IntegrationsPage',
-    component: IntegrationsPage
-  },
-  {
-    path: '/integrations/add',
-    name: 'IntegrationAdd',
-    component: IntegrationAdd
-  },
+    path: '',
+    component : PublicLayout,
+    children: [
+      {
+        path: "/signin",
+        component: SignIn
+      },
+      {
+        path: "signup",
+        component: SignUp
+      },
+    ]
+  }
 ]
 
 const router = new VueRouter({

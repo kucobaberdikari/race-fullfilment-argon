@@ -1,17 +1,17 @@
 <template>
   <!-- Navbar -->
-  <nav
-    class="navbar navbar-expand-lg top-0 z-index-3 position-absolute mt-4"
-    :class="isBlur ? isBlur : 'shadow-none my-2 navbar-transparent w-100'"
+ <nav
+   class="navbar navbar-expand-lg top-0 z-index-3 position-absolute mt-4"
+    :class="isBlur ? isBlur : 'shadow-none my-2 navbar-dark w-100'"
+    v-bind:darkMode="true"
   >
-    <div class="container ps-2 pe-0">
+    <div class="container ps-2 pe-0 py-0">
       <router-link
-        class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
+        class="navbar-brand font-weight-bolder ms-lg-0 ms-3 ps-2"
         :class="darkMode ? 'text-black' : 'text-white'"
         to="/"
-        >Argon Dashboard 2</router-link
-      >
-      <button
+        >Race Fullfilment</router-link>
+        <button
         class="shadow-none navbar-toggler ms-2"
         type="button"
         data-bs-toggle="collapse"
@@ -19,7 +19,7 @@
         aria-controls="navigation"
         aria-expanded="false"
         aria-label="Toggle navigation"
-      >
+        >
         <span class="mt-2 navbar-toggler-icon">
           <span class="navbar-toggler-bar bar1"></span>
           <span class="navbar-toggler-bar bar2"></span>
@@ -30,9 +30,9 @@
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <router-link
-              class="nav-link d-flex align-items-center me-2 active"
+              class="nav-link d-flex align-items-center me-2 "
               aria-current="page"
-              to="/dashboard-default"
+              to="/dashboard"
             >
               <i
                 class="fa fa-chart-pie opacity-6 me-1"
@@ -73,7 +73,7 @@
             </router-link>
           </li>
         </ul>
-        <ul class="navbar-nav d-lg-block d-none">
+        <!-- <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
             <a
               href="https://www.creative-tim.com/product/vue-argon-dashboard"
@@ -82,7 +82,7 @@
               >Free download</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
   </nav>
@@ -94,7 +94,7 @@ import downArrWhite from "@/assets/img/down-arrow-white.svg";
 import downArrBlack from "@/assets/img/down-arrow-dark.svg";
 
 export default {
-  name: "navbar",
+  name: "NavbarMain",
   data() {
     return {
       downArrWhite,

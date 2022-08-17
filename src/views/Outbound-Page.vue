@@ -105,7 +105,7 @@
           </div>
          </div>
          <div class="col-lg-10 col-md-6 col-12">
-            <div class="card shadow-sm card-body h-75">
+            <div class="card shadow-sm card-body max-height-400">
                <div class="table-responsive">
                   <table class="table table-striped table-responsive-xl mb-0 w-auto" id="table1">
                         <thead>
@@ -146,7 +146,7 @@
 
 <script>
 // import Outbonddummy from "../components/data-dummy/Outbond-Dummy.json";
-import $ from "jquery";
+// import $ from "jquery";
 import axios from "axios";
 export default{
     name: 'OutboundPage',
@@ -157,13 +157,13 @@ export default{
       }
     },
     mounted(){
-       $('#table1').dataTable({
-         "responsive": false,"lengthChange": false,"ordering":false,
-          columnDefs: [
-      {
-          className: 'dt-head-center dt-body-center'
-      }]
-     });
+    //    $('#table1').dataTable({
+    //      "responsive": false,"lengthChange": false,"ordering":false,
+    //       columnDefs: [
+    //   {
+    //       className: 'dt-head-center dt-body-center'
+    //   }]
+    //  });
       this.load()
     },  
     methods: {

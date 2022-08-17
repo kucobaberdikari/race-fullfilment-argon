@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 container-fluid" >                 
+  <div class="py-2 container-fluid" >                 
     <div class="row mx-2">
       <div class="col-lg-2 col-md-6 col-12">
           <div class="card mx-n3 shadow-lg position-sticky h-100 justify-content-center">
@@ -86,16 +86,14 @@
       </div>
       <div class="col-lg-10 col-md-6 col-12"> 
         <div class="card">
-          <div class="card-header pb-1">
-              <!-- <div class="row row1"> -->
+          <!-- <div class="card-header pb-1">
                 <button type="button" class="btn btn-info" @click="showModal">Open Modal!  </button>
                     <ModalAdd v-show="isModalVisible" @close="closeModal" >
                       <template v-slot:header></template>
                       <template v-slot:body></template>
                       <template v-slot:footer></template>
                     </ModalAdd>
-              <!-- </div>          -->
-          </div>
+          </div> -->
           <div class="card-body">
               <table class="table table-striped table-responsive-md dt-center" id="table1">
                 <thead>
@@ -131,7 +129,7 @@
 <script>
 
 
-import ModalAdd from "../components/ModalAdd.vue";
+// import ModalAdd from "../components/ModalAdd.vue";
 // import ToastrNotif from '../components/ToastrNotif.vue';
 // import ChatBox from "@/components/ChatBox.vue";
 import Datadummy from "../components/data-dummy/Data-dummy.json";
@@ -139,16 +137,16 @@ import $ from "jquery";
   export default {
     name: 'AddProduk',
     components: {
-      ModalAdd,
+      // ModalAdd,
       // ToastrNotif,
       // ChatBox,
     },
     data() {
       return {
-        isModalVisible: false,
+        // isModalVisible: false,
         // ChatVisible: false,
-        isHidden: false,
-        isShow:true,
+        // isHidden: false,
+        // isShow:true,
         datas:Datadummy,
       };
 
