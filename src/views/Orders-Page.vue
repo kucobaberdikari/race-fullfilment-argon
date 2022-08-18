@@ -1,96 +1,13 @@
 <template>
     <div class="py-4 container-fluid">
         <div class="row px-3">
-           <div class="col-12">
-            <div class="card max-height-500">    
-                <b-card no-body>
-                    <b-tabs pills card class="col-md-12" content-class="mt-3" justified>
-                        <b-tab no-body title="All " active>
-                          <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-responsive-md" id="table1">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Invoice</th>
-                                        <th>Total</th>
-                                        <th>Status</th>
-                                        <th>Gudang</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(data,index) in Orders_Dummy" :key="data.id">
-                                        <td  >{{index+1}}</td>
-                                        <td>{{data.invoice}}</td>
-                                        <td>{{data.total}}</td>
-                                        <td v-if="data.status === 'Inbound'"> <span class="badge bg-gradient-warning">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Proses'"> <span class="badge bg-gradient-primary">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Outbound'"> <span class="badge bg-gradient-success">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Dikirim'"> <span class="badge bg-gradient-info">{{data.status}}</span></td>
-                                        <td v-else-if="data.status === 'Sampai'"> <span class="badge bg-gradient-secondary">{{data.status}}</span></td>
-                                        <td v-else><span class="badge bagde-default">{{data.status}}</span></td>
-                                        <td>{{data.gudang}}</td>
-                                        <td>{{data.created_at}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                          </div>
-                        </b-tab>
-                        <b-tab no-body title="Inbound">
+            <div class="col-12">
+                <div class="card max-height-500">    
+                    <b-card no-body>
+                        <b-tabs pills card class="col-md-12" content-class="mt-3" justified>
+                            <b-tab no-body title="All " active>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-responsive-md" id="table2">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Invoice</th>
-                                        <th>Total</th>
-                                        <th>Status</th>
-                                        <th>Gudang</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr v-for="(data,index) in filterstatusInbound" :key="data.id">
-                                        <td>{{index+1}}</td>
-                                        <td>{{data.invoice}}</td>
-                                        <td>{{data.total}}</td>
-                                        <td><span class="badge bg-gradient-warning">{{data.status}}</span></td>
-                                        <td>{{data.gudang}}</td>
-                                        <td>{{data.created_at}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                        </b-tab>
-                        <b-tab no-body title="Proses">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-responsive-md" id="table3">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Invoice</th>
-                                        <th>Total</th>
-                                        <th>Status</th>
-                                        <th>Gudang</th>
-                                        <th>Created At</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                     <tr v-for="(data,index) in filterstatusProses" :key="data.id">
-                                        <td>{{index+1}}</td>
-                                        <td>{{data.invoice}}</td>
-                                        <td>{{data.total}}</td>
-                                        <td><span class="badge bg-gradient-primary">{{data.status}}</span></td>
-                                        <td>{{data.gudang}}</td>
-                                        <td>{{data.created_at}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                        </b-tab>
-                        <b-tab no-body title="Outbound">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-responsive-md" id="table2">
+                                <table class="table table-bordered table-striped table-responsive-md" id="table1">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -102,21 +19,52 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="(data,index) in filterstatusOutbound" :key="data.id">
+                                        <tr v-for="(data,index) in Orders_Dummy" :key="data.id">
+                                            <td  >{{index+1}}</td>
+                                            <td>{{data.invoice}}</td>
+                                            <td>{{data.total}}</td>
+                                            <td v-if="data.status === 'Inbound'"> <span class="badge bg-gradient-warning">{{data.status}}</span></td>
+                                            <td v-else-if="data.status === 'Proses'"> <span class="badge bg-gradient-primary">{{data.status}}</span></td>
+                                            <td v-else-if="data.status === 'Outbound'"> <span class="badge bg-gradient-success">{{data.status}}</span></td>
+                                            <td v-else-if="data.status === 'Dikirim'"> <span class="badge bg-gradient-info">{{data.status}}</span></td>
+                                            <td v-else-if="data.status === 'Sampai'"> <span class="badge bg-gradient-secondary">{{data.status}}</span></td>
+                                            <td v-else><span class="badge bagde-default">{{data.status}}</span></td>
+                                            <td>{{data.gudang}}</td>
+                                            <td>{{data.created_at}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </b-tab>
+                            <b-tab no-body title="Inbound">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-responsive-md" id="table2">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Invoice</th>
+                                            <th>Total</th>
+                                            <th>Status</th>
+                                            <th>Gudang</th>
+                                            <th>Created At</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(data,index) in filterstatusInbound" :key="data.id">
                                             <td>{{index+1}}</td>
                                             <td>{{data.invoice}}</td>
                                             <td>{{data.total}}</td>
-                                            <td><span class="badge bg-gradient-success">{{data.status}}</span></td>
+                                            <td><span class="badge bg-gradient-warning">{{data.status}}</span></td>
                                             <td>{{data.gudang}}</td>
                                             <td>{{data.created_at}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </b-tab>
-                        <b-tab no-body title="Dikirim">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-responsive-md" id="table5">
+                                </div>
+                            </b-tab>
+                            <b-tab no-body title="Proses">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-responsive-md" id="table3">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -128,48 +76,100 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr v-for="data in filterstatusDikirim" :key="data.id">
-                                            <td>{{data.id}}</td>
-                                            <td>{{data.invoice}}</td>
-                                            <td>{{data.total}}</td>
-                                            <td><span class="badge bg-gradient-info">{{data.status}}</span></td>
-                                            <td>{{data.gudang}}</td>
-                                            <td>{{data.created_at}}</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </b-tab>
-                        <b-tab no-body title="Sampai">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-responsive-md" id="table4">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Invoice</th>
-                                            <th>Total</th>
-                                            <th>Status</th>
-                                            <th>Gudang</th>
-                                            <th>Created At</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr v-for="(data,index) in filterstatusSampai" :key="data.id">
+                                        <tr v-for="(data,index) in filterstatusProses" :key="data.id">
                                             <td>{{index+1}}</td>
                                             <td>{{data.invoice}}</td>
                                             <td>{{data.total}}</td>
-                                            <td><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
+                                            <td><span class="badge bg-gradient-primary">{{data.status}}</span></td>
                                             <td>{{data.gudang}}</td>
                                             <td>{{data.created_at}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </b-tab>
-                    </b-tabs>
-                </b-card>
-           </div>
-           </div>
+                                </div>
+                            </b-tab>
+                            <b-tab no-body title="Outbound">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-responsive-md" id="table2">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Invoice</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Gudang</th>
+                                                <th>Created At</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="(data,index) in filterstatusOutbound" :key="data.id">
+                                                <td>{{index+1}}</td>
+                                                <td>{{data.invoice}}</td>
+                                                <td>{{data.total}}</td>
+                                                <td><span class="badge bg-gradient-success">{{data.status}}</span></td>
+                                                <td>{{data.gudang}}</td>
+                                                <td>{{data.created_at}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </b-tab>
+                            <b-tab no-body title="Dikirim">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-responsive-md" id="table5">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Invoice</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Gudang</th>
+                                                <th>Created At</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="data in filterstatusDikirim" :key="data.id">
+                                                <td>{{data.id}}</td>
+                                                <td>{{data.invoice}}</td>
+                                                <td>{{data.total}}</td>
+                                                <td><span class="badge bg-gradient-info">{{data.status}}</span></td>
+                                                <td>{{data.gudang}}</td>
+                                                <td>{{data.created_at}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </b-tab>
+                            <b-tab no-body title="Sampai">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-striped table-responsive-md" id="table4">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Invoice</th>
+                                                <th>Total</th>
+                                                <th>Status</th>
+                                                <th>Gudang</th>
+                                                <th>Created At</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr v-for="(data,index) in filterstatusSampai" :key="data.id">
+                                                <td>{{index+1}}</td>
+                                                <td>{{data.invoice}}</td>
+                                                <td>{{data.total}}</td>
+                                                <td><span class="badge bg-gradient-secondary">{{data.status}}</span></td>
+                                                <td>{{data.gudang}}</td>
+                                                <td>{{data.created_at}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </b-tab>
+                        </b-tabs>
+                    </b-card>
+                </div>
+            </div>
         </div> 
     </div>
 </template>

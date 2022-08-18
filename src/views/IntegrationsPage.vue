@@ -2,12 +2,12 @@
     <div class="py-4 container-fluid">
         <div class="row p-4">
              <div class="card">
-                <div class="card-header pb-0 pt-3">
+                <div class="card-header pb-0 pt-3 bg-white border-0">
                     <div class="float-left">
-                        <button type="button" class="btn btn-lg btn-warning"><a href="/integrations/add" class="text-decoration-none">ADD</a></button>
+                        <button type="button" class="btn btn-lg btn-default"><a href="/integrations/add" class="text-decoration-none">ADD</a></button>
                     </div>
                 </div>
-                <div class="card-body">
+                <div class="card-body pt-0 px-0">
                     <div class="table-responsive">
                         <table class="table table-striped table-responsive-md" id="table1">
                             <thead>

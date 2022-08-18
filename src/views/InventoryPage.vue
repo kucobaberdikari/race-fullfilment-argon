@@ -274,7 +274,7 @@
        </form>
       </div>
       <!-- <div class="modal-footer mt-1 align-items-end border-0 py-1 "> -->
-       <div class="row mt-1 align-items-end border-0 py-1 pe-2  ">
+       <div class="modal-footer mt-1 align-items-end border-0 py-1">
          <button class="btn bg-gradient-success w-25 me-1" @click="editform(form.id)">Update</button>
         <b-button class="mt-3 ms-1 w-25" block @click="$bvModal.hide('modaledit')">Close Me</b-button>
        </div>

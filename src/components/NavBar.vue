@@ -35,7 +35,7 @@
           
         </div>
         <ul class="navbar-nav justify-content-end">
-          <li class="nav-item d-xl-none ps-3 me-2 d-flex align-items-center">
+          <li class="nav-item d-xl-none ps-3 me-3 d-flex align-items-center">
             <a
               href="#"
               @click="toggleSidebar"
