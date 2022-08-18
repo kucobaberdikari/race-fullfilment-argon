@@ -1,7 +1,7 @@
 <template>
   <div class="py-2 container-fluid ps-3" >
       <div class="row mx-2 pe-1 mt-2">
-         <div class="col-lg-2 col-md-6 col-12">
+         <div class="col-lg-2 ">
            <div class="card mx-n3 shadow-lg position-sticky h-auto justify-content-center">
             <ul class="nav flex-column bg-white border-radius-lg p-1 ">
               <li class="nav-item d-flex justify-content-between align-items-center mt-2">
@@ -104,7 +104,7 @@
             </div>
           </div>
          </div>
-         <div class="col-lg-10 col-md-6 col-12 ">
+         <div class="col-lg-10  ">
             <div class="card shadow-sm max-height-500 ms-3 rounded-2">
               <div class="card-header pb-1 float-end bg-white border-0">
                   <div class="input-group w-25 pe-1 float-end">
@@ -114,7 +114,7 @@
               </div>
               <!-- <div class="card-body"> -->
                 <div class="table-responsive max-height-500 mt-2">
-                  <table class="table table-striped table-responsive mb-0 w-auto align-items-center" id="table1">
+                  <table class="table  mb-0 w-auto align-items-center" id="table1">
                             <thead>
                               <tr >
                                   <th>No</th>
@@ -130,15 +130,15 @@
                             </thead>
                             <tbody>
                               <tr v-for="data in Outbound_Dummy" :key="data.id" id="table1">
-                                  <td class="dt-body-center">{{data.id}}</td>
-                                  <td class="dt-body-center">{{data.kd_inbound}}</td>
-                                  <td class="dt-body-center">{{data.costumer}}</td>
-                                  <td class="dt-body-center">{{data.alamat}}</td>
-                                  <td class="dt-body-center" ><p class="badge bg-gradient-info rounded-1">{{data.status}}</p></td>
-                                  <td class="dt-body-center">{{data.kurir}}</td>
-                                  <td class="dt-body-center">{{data.exported}}</td>
-                                  <td class="dt-body-center">{{data.order_date}}</td>
-                                  <td class="dt-body-center">{{data.created}}</td>
+                                  <td class="justify-content-center ps-4">{{data.id}}</td>
+                                  <td class="justify-content-center">{{data.kd_inbound}}</td>
+                                  <td class="justify-content-center">{{data.costumer}}</td>
+                                  <td class="justify-content-center">{{data.alamat}}</td>
+                                  <td class="justify-content-center ps-3"><p class="badge bg-gradient-info rounded-1">{{data.status}}</p></td>
+                                  <td class="justify-content-center ps-4">{{data.kurir}}</td>
+                                  <td class="justify-content-center ps-4">{{data.exported}}</td>
+                                  <td class="justify-content-center ps-4">{{data.order_date}}</td>
+                                  <td class="justify-content-center ps-4">{{data.created}}</td>
                               </tr>
                             </tbody>
                   </table>

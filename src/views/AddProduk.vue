@@ -3,9 +3,9 @@
     <div class="row mx-2 pe-0 pt-0">
       <div class="col-lg-2 col-md-6 col-12">
           <div class="card mx-n3 shadow-lg position-sticky h-100 justify-content-center">
-            <ul class="nav flex-column ng-hite border-radius-lg p-1">
+            <ul class="nav flex-column bg-white border-radius-lg p-1">
               <li class="nav-item d-flex justify-content-between align-items-center">
-                <a href="#" class="nav-link text-body active ps-1">
+                <a href="#" class="nav-link text-body ps-1 active">
                   <div class="px-2 py-1 d-flex align-items-center">
                     <img src="../assets/images/shopee.deffdfa.png" alt="" height="35px" width="35px">
                      <div class="ms-4">
@@ -26,7 +26,6 @@
                     </p>
                   </div>
                   </div>
-                 
                 </a>
               </li>
               <li class="nav-item d-flex justify-content-between align-items-center">
@@ -39,7 +38,6 @@
                       </p>
                     </div>
                   </div>
-
                 </a>
               </li>
               <li class="nav-item d-flex justify-content-between align-items-center">
@@ -52,7 +50,6 @@
                       </p>
                     </div>
                   </div>
-                  
                 </a>
               </li>
               <li class="nav-item d-flex justify-content-between align-items-center">
@@ -65,7 +62,6 @@
                       </p>
                     </div>
                   </div>
-                
                 </a>
               </li>
               <li class="nav-item d-flex justify-content-between align-items-center">
@@ -78,7 +74,6 @@
                         </p>
                       </div>
                   </div>
-                 
                 </a>
               </li>
             </ul>

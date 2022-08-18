@@ -4,7 +4,12 @@
              <div class="card">
                 <div class="card-header pb-0 pt-3 bg-white border-0">
                     <div class="float-left">
-                        <button type="button" class="btn btn-lg btn-default"><a href="/integrations/add" class="text-decoration-none">ADD</a></button>
+                        <!-- <button type="button" class="btn btn-lg btn-default"><a href="/integrations/add" >ADD</a></button> -->
+                        <router-link to="/integrations/add" class="nav-link" v-bind="$attrs">
+                            <button class="btn btn-md bg-gradient-success">
+                                add new
+                            </button>
+                        </router-link>
                     </div>
                 </div>
                 <div class="card-body pt-0 px-0">

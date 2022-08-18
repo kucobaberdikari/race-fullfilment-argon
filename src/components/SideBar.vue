@@ -12,7 +12,7 @@
         ? 'bg-dark shadow-none'
         : ' '
     } ${this.$store.state.sidebarType}`"
-    id="sidenav-main" role="menu">
+    id="sidenav-main" >
 
     <div class="sidenav-header">
        <i
@@ -31,7 +31,7 @@
           class="navbar-brand-img h-100"
           alt="main_logo"
         />
-        <span class="ms-2 font-weight-bold mt-4 text-white h5">Race Fullfilment</span>
+        <span class="ms-2 font-weight-bold mt-4 text-white ">Race Fullfilment</span>
         
       </router-link>
             <!-- <a
@@ -48,81 +48,119 @@
               </div>
             </a> -->
     </div>
-    <hr class="horizontal dark mt-0">
+    <!-- <hr class="horizontal dark mt-0"> -->
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link " href="/">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fas fa-th-large text-primary text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Dashboard</span>
-          </a>
+          <sidenav-item
+            url="/dashboard"
+            :class="getRoute() === 'dashboard' ? 'active' : ''"
+            :navText="'Dashboard'"
+          >
+            <template v-slot:icon>
+              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white"><b>STOCK</b></h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/inventory">
-          <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-calendar-grid-58 text-warning text-lg opacity-10"></i>
-            </div> 
-            <span class="nav-link-text ms-1mb-0  h5 text-white">Inventory</span>
-          </a>
+          <sidenav-item
+            url="/inventory"
+            :class="getRoute() === 'inventory' ? 'active' : ''"
+            :navText="'inventory'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/produk/add">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-credit-card text-success text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Products</span>
-          </a>
+          <sidenav-item
+            url="/produk/add"
+            :class="getRoute() === 'Products' ? 'active' : ''"
+            :navText="'Products'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white"><b>SHIPMENT</b></h6>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/inbound">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-app text-info text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Inbound</span>
-          </a>
+         <li class="nav-item">
+          <sidenav-item
+            url="/inbound"
+            :class="getRoute() === 'Inbound' ? 'active' : ''"
+            :navText="'Inbound'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/outbound">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-world-2 text-danger text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Outbound</span>
-          </a>
+          <sidenav-item
+            url="/outbound"
+            :class="getRoute() === 'Outbound' ? 'active' : ''"
+            :navText="'Outbound'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/tracking">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-world-2 text-danger text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Tracking</span>
-          </a>
+          <sidenav-item
+            url="/tracking"
+            :class="getRoute() === 'Tracking' ? 'active' : ''"
+            :navText="'Tracking'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/orders">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="ni ni-world-2 text-danger text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Orders</span>
-          </a>
+          <sidenav-item
+            url="/orders"
+            :class="getRoute() === 'Orders' ? 'active' : ''"
+            :navText="'Orders'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white"><b>SETTINGS</b> </h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/integrations">
-            <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="fas fa-file-code text-danger text-lg opacity-10"></i>
-            </div>
-            <span class="nav-link-text ms-1 mb-0 h5 text-white">Integrations</span>
-          </a>
+          <sidenav-item
+            url="/integrations"
+            :class="getRoute() === 'Integrations' ? 'active' : ''"
+            :navText="'Integrations'"
+          >
+            <template v-slot:icon>
+              <i
+                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+              ></i>
+            </template>
+          </sidenav-item>
         </li>
       </ul>
     </div>
@@ -130,14 +168,14 @@
 </template>
 
 <script>
-  // import SidenavList from "./SidenavList.vue";
+  import SidenavItem from "../examples/Sidenav/SidenavItem.vue";
   import logo from "../assets/images/newlogo.png";
   // import logoWhite from "@/assets/img/logo-ct.png";
 
     export default {
     name: "SideBar",
     components: {
-      // SidenavList
+      SidenavItem
     },
     data() {
       return {
@@ -145,6 +183,12 @@
         // logoWhite
       };
     },
+     methods: {
+    getRoute() {
+      const routeArr = this.$route.path.split("/");
+      return routeArr[1];
+    }
+  },
     props: ["custom_class", "layout"]
   };
 </script>

@@ -72,7 +72,7 @@
               aria-labelledby="dropdownMenuButton"
             >
               <li class="mb-2">
-                <a class="dropdown-item border-radius-md" href="javascript:;">
+                <a class="dropdown-item border-radius-md" href="/signin">
                       <h6 class="mb-0 ">
                         <i class="fad fa-sign-out me-1"></i>
                        Log Out
