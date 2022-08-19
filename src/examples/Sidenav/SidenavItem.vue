@@ -1,7 +1,7 @@
 <template>
   <router-link :to="url" class="nav-link" v-bind="$attrs">
     <div
-      class="icon icon-shape icon-sm text-center d-flex align-items-center justify-content-center"
+      class="icon icon-shape icon-md pt-0 text-center d-flex align-items-center justify-content-center"
     >
       <slot name="icon"></slot>
     </div>

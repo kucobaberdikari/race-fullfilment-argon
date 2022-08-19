@@ -1,7 +1,7 @@
 <template>
   <div class="py-2 container-fluid px-0" >                 
     <div class="row mx-2 pe-0 pt-0">
-      <div class="col-lg-2 col-md-6 col-12">
+      <div class="col-lg-2 col-md-12 col-12">
           <div class="card mx-n3 shadow-lg position-sticky h-100 justify-content-center">
             <ul class="nav flex-column bg-white border-radius-lg p-1">
               <li class="nav-item d-flex justify-content-between align-items-center">
@@ -79,7 +79,7 @@
             </ul>
           </div>
       </div>
-      <div class="col-lg-10 col-md-6 col-12"> 
+      <div class="col-lg-10 col-md-12 col-12"> 
         <div class="card">
           <!-- <div class="card-header pb-1">
                 <button type="button" class="btn btn-info" @click="showModal">Open Modal!  </button>

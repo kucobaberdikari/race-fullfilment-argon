@@ -1,7 +1,7 @@
 <template>
   <div class="py-4 container-fluid">                
     <div class="row ">
-      <div class="col-lg-4 col-md-8 col-12">
+      <div class="col-lg-4 col-md-4 col-12">
         <div class="card">
           <div class="card-body p-3">
             <div class="row">
@@ -20,7 +20,7 @@
           </div>
         </div>
       </div>  
-      <div class="col-lg-4 col-md-8 col-12">
+      <div class="col-lg-4 col-md-4 col-12">
         <div class="card">
           <div class="card-body p-3">
             <div class="row">
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>  
-      <div class="col-lg-4 col-md-8 col-12">
+      <div class="col-lg-4 col-md-4 col-12">
         <div class="card">
           <div class="card-body p-3">
             <div class="row">
@@ -61,7 +61,7 @@
     </div>
     
     <div class="row mt-2">
-        <div class=" col-lg-4 col-md-8 col-12">
+        <div class=" col-lg-4 col-md-4 col-12">
             <div class="card">
               <div class="card-body p-3">
                 <div class="row">
@@ -80,7 +80,7 @@
               </div>
             </div>
         </div>
-        <div class=" col-lg-4 col-md-8 col-12">
+        <div class=" col-lg-4 col-md-4 col-12">
             <div class="card">
               <div class="card-body p-3">
                 <div class="row">
@@ -99,7 +99,7 @@
               </div>
             </div>
         </div>
-        <div class=" col-lg-4 col-md-8 col-12">
+        <div class=" col-lg-4 col-md-4 col-12">
             <div class="card">
               <div class="card-body p-3">
                 <div class="row">

@@ -1,7 +1,7 @@
 <template>
   <aside 
       class="my-3 overflow-auto border-0 sidenav navbar navbar-vertical navbar-expand-xs border-radius-xl bg-gradient-dark "
-      data-color="warning"
+      data-color="dark"
     :class="`${
       this.$store.state.isRTL
         ? 'me-3 rotate-caret fixed-end'
@@ -51,14 +51,14 @@
     <!-- <hr class="horizontal dark mt-0"> -->
     <div class="collapse navbar-collapse w-auto h-auto h-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
+        <li class="nav-item my-1">
           <sidenav-item
             url="/dashboard"
             :class="getRoute() === 'dashboard' ? 'active' : ''"
             :navText="'Dashboard'"
           >
             <template v-slot:icon>
-              <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+              <i class="fas fa-th" style="color:#f8f9fa;height: 32px;width:32px;padding:0"></i>
             </template>
           </sidenav-item>
         </li>
@@ -72,8 +72,8 @@
             :navText="'inventory'"
           >
             <template v-slot:icon>
-              <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+               <i
+                class="fas fa-dolly-flatbed" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
               ></i>
             </template>
           </sidenav-item>
@@ -86,7 +86,7 @@
           >
             <template v-slot:icon>
               <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+                class="fas fa-boxes" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
               ></i>
             </template>
           </sidenav-item>
@@ -102,7 +102,7 @@
           >
             <template v-slot:icon>
               <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
+                class="fal fa-arrow-alt-to-bottom" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
               ></i>
             </template>
           </sidenav-item>
@@ -114,9 +114,8 @@
             :navText="'Outbound'"
           >
             <template v-slot:icon>
-              <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
-              ></i>
+             <i class="fal fa-arrow-alt-from-bottom" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
+             ></i>
             </template>
           </sidenav-item>
         </li>
@@ -127,9 +126,8 @@
             :navText="'Tracking'"
           >
             <template v-slot:icon>
-              <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
-              ></i>
+            <i class="fas fa-crosshairs" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
+            ></i>
             </template>
           </sidenav-item>
         </li>
@@ -140,9 +138,8 @@
             :navText="'Orders'"
           >
             <template v-slot:icon>
-              <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
-              ></i>
+             <i class="fas fa-history" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
+             ></i>
             </template>
           </sidenav-item>
         </li>
@@ -156,9 +153,8 @@
             :navText="'Integrations'"
           >
             <template v-slot:icon>
-              <i
-                class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"
-              ></i>
+             <i class="fas fa-file-code" style="color:#f8f9fa;height: 32px;width:32px;padding:0"
+             ></i>
             </template>
           </sidenav-item>
         </li>

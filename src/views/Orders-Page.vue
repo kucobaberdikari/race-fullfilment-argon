@@ -4,8 +4,8 @@
             <div class="col-12">
                 <div class="card max-height-500">    
                     <b-card no-body>
-                        <b-tabs pills card class="col-md-12" content-class="mt-3" justified>
-                            <b-tab no-body title="All " active>
+                        <b-tabs pills card class="col-md-12 bg-white" content-class="mt-3" justified>
+                            <b-tab no-body title="All" active>
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-responsive-md" id="table1">
                                     <thead>
