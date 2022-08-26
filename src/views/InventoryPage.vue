@@ -128,7 +128,7 @@
             </div>
           <div class="d-flex justify-content-md-end col-6 col-md-6 mb-3">
             <div class="input-group w-50 pe-1">
-                  <input type="text" class="form-control border-1" placeholder="   search..." v-model="filter" />
+                  <input type="text" class="form-control border-1" placeholder="   search..."   /><!--v-model="filter"-->
               </div>
           </div>
           </div>
@@ -138,25 +138,53 @@
             <table class="table  table-striped table-responsive-md mt-3 align-items-center" id="table1">
               <thead>
                   <tr>
-                    <th>No</th>
-                    <th @click="sort('seller')">Seller</th>
+                    <th class="text-center">No</th>
+                    <th @click="sort('seller')" class="ps-5">Seller</th>
                     <th >Tipe Barcode</th>
                     <th @click="sort('SKU')">Qty SKU</th>
                     <th @click="sort('stock')">Qty Stock</th>
-                    <th>Action</th>
+                    <th class="ps-6">Action</th>
                   </tr>
               </thead> 
               <tbody>
-                  <tr v-for="(data,index) in Inventory_Dummy" :key="data.id">
-                    <td class="ps-2  ">{{index+1}}</td>
+                 <tr>
+                  <td class="ps-2 text-center">0</td>
                     <td class="w-30">
                       <div class="px-2 py-1 d-flex align-items-center">
                         <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
+                          <router-link :to="{name:'InventoryCSDummy'}" class="nav-link" v-bind="$attrs"> 
                             <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
+                            </router-link>
+                        </div>
+                        <div class="ms-4">
+                          <p class="mb-0 text-lg font-weight-bold">Seller Dummy</p>
+                          <a href="#" class="mb-0 text-sm">0811-xxxx-xxxx</a> 
+                          <!-- <a href="#" class="mb-0 text-sm">{{data.tlp}}</a> -->
+                        </div>
+                      </div>
+
+                    </td>
+                    <td><div class="ps-3">Barcode</div></td>
+                    <td><div class="ps-4">SKU</div></td>
+                    <td><div class="ps-4">Stock</div></td>
+                    <td>
+                    <b-button id="show-modaledit" @click="ModalEdit(data)" class="btn bg-gradient-success me-2" >Edit Seller</b-button>
+                    <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button>
+                    </td>
+                </tr>
+                  <tr v-for="(data,index) in Inventory_Dummy" :key="data.id_barang">
+                    <td class="ps-2 text-center ">{{index+1}}</td>
+                    <td class="w-30">
+                      <div class="px-2 py-1 d-flex align-items-center">
+                        <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
+                          <router-link :to="{name:'InventoryCustomer',params:{id:data.id}}" class="nav-link" v-bind="$attrs"> 
+                            <i class="fal fa-store text-lg opacity-10" aria-hidden="true"></i>
+                            </router-link>
                         </div>
                         <div class="ms-4">
                           <p class="mb-0 text-lg font-weight-bold">{{data.seller}}</p>
-                          <a href="#" class="mb-0 text-sm">{{data.telepon}}</a>
+                          <a href="#" class="mb-0 text-sm">{{data.telepon}}</a> 
+                          <!-- <a href="#" class="mb-0 text-sm">{{data.tlp}}</a> -->
                         </div>
                       </div>
 
@@ -166,7 +194,8 @@
                     <td><div class="ps-4">{{data.stock}}</div></td>
                     <td>
                     <b-button id="show-modaledit" @click="ModalEdit(data)" class="btn bg-gradient-success me-2" >Edit Seller</b-button>
-                    <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button>
+                    <!-- <button class="btn btn-danger " @click="deleteseller(data.id)">Delete</button> -->
+                    <button class="btn btn-danger " @click="alertDelete(data.id)">Delete!</button>
                     </td>
                   </tr>
               </tbody>
@@ -281,7 +310,6 @@
       <!-- </div> -->
     </b-modal>
 </div>
-
 </template>
 
 <script>
@@ -289,6 +317,13 @@
 import "jquery/dist/jquery.min.js";
 // import $ from "jquery";
 import axios from 'axios'
+// import { onMounted, ref } from 'vue'
+
+// const routes = [{
+//   path: '/inventorycustomer/:id',
+//   name: 'detailcs',
+//   component: 'id_cs'
+// }]
 export default{
     name: 'InventoryPage',
     components: {},
@@ -316,7 +351,6 @@ export default{
     //     $('#table1').dataTable({
     //       "responsive": false,"lengthChange": false, 	
     //     "ordering": false,
-          
     //   });  
     //  this.load()
     // },
@@ -326,8 +360,8 @@ export default{
 
     methods:{
        load(){
-        axios.get('http://localhost:3000/Inventory_Dummy').then(res => {
-        this.Inventory_Dummy = res.data 
+        axios.get('http://localhost:3000/Inventory_Dummy')
+        .then(res => {this.Inventory_Dummy = res.data 
       }).catch ((err) => {
         console.log(err);
       })
@@ -365,6 +399,25 @@ export default{
         console.log(error.response)
       })
     },
+    alertDelete(id){
+      this.$swal({
+          title: 'Are you sure?',
+          text: 'You can\'t revert your action',
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes Delete it!',
+          cancelButtonText: 'No, Keep it!',
+          showCloseButton: true,
+          showLoaderOnConfirm: true
+        }).then((result) => {
+          if(result.value) {
+            this.$swal('Deleted', 'You successfully deleted this file', 'success',this.deleteseller(id));
+            //  axios.delete(`http://localhost:3000/Inventory_Dummy/${id}`)
+          } else {
+            this.$swal('Cancelled', 'Your file is still intact', 'info')
+          }
+        })
+    }
     // sort:function(s) {
     //   //if s == current sort, reverse
     //   if(s === this.currentSort) {

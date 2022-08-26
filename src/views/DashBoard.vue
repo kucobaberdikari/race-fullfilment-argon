@@ -5,22 +5,21 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-12 ">
                         <div class="card px-2 border-radius-xl">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <div class="numbers">
-                                            <p class="text-sm-mb-0 text-uppercase font-weight-bolder">Request Pickup</p>
-                                            <h5 class="font-weight-bolder">12</h5>
-                                            <p class="mb-0">
-                                                
-                                            </p>
-                                        </div>
-                                    </div>  
-                                    <div class="col-4 text-end">
-                                        <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
-                                            <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
-                                        </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="numbers">
+                                        <p class="text-sm-mb-0 text-uppercase font-weight-bolder">Request Pickup</p>
+                                        <h5 class="font-weight-bolder">12</h5>
+                                        <p class="mb-0">
+                                        </p>
+                                    </div>
+                                </div>  
+                                <div class="col-4 text-end">
+                                    <div class="icon icon-shape bg-gradient-warning shadow-primary text-center border-radius-lg">
+                                        <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
@@ -45,42 +44,42 @@
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
                          <div class="card px-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <div class="numbers">
-                                            <p class="text-sm-mb-0 text-uppercase font-weight-bolder">process</p>
-                                            <h5 class="font-weight-bolder">15</h5>
-                                            <p class="mb-0">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="numbers">
+                                        <p class="text-sm-mb-0 text-uppercase font-weight-bolder">process</p>
+                                        <h5 class="font-weight-bolder">15</h5>
+                                        <p class="mb-0">
                                                 
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <div class="icon icon-shape bg-gradient-info shdow-primary text-center rounded-rectangular">
-                                            <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
-                                        </div>
+                                        </p>
                                     </div>
                                 </div>
+                                <div class="col-4 text-end">
+                                    <div class="icon icon-shape bg-gradient-info shdow-primary text-center rounded-rectangular">
+                                        <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
                          <div class="card px-2">
-                                <div class="row">
-                                    <div class="col-8">
-                                        <div class="numbers">
-                                            <p class="text-sm-mb-0 text-uppercase font-weight-bolder">outbond</p>
-                                            <h5 class="font-weight-bolder">10</h5>
-                                            <p class="mb-0">
+                            <div class="row">
+                                <div class="col-8">
+                                    <div class="numbers">
+                                        <p class="text-sm-mb-0 text-uppercase font-weight-bolder">outbond</p>
+                                        <h5 class="font-weight-bolder">10</h5>
+                                        <p class="mb-0">
                                                 
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 text-end">
-                                        <div class="icon icon-shape bg-gradient-success shdow-primary text-center rounded-rectangular">
-                                            <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
-                                        </div>
+                                        </p>
                                     </div>
                                 </div>
+                                <div class="col-4 text-end">
+                                    <div class="icon icon-shape bg-gradient-success shdow-primary text-center rounded-rectangular">
+                                        <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,72 +109,71 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                         <div class="timeline timeline-one-side">
-                                    <div>
-                                        <span class="timeline-step p-3 bg-">
-                                            <i class="far fa-dot-circle bg-indigo"></i>
-                                        </span>
-                                        <div class="timeline-content ">
-                                            <dt>Inbound</dt>
-                                            <dd>Kamis, 20 Agustus 2018 11.00 PM</dd>
+                                        <div class="timeline timeline-one-side">
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-indigo"></i>
+                                                </span>
+                                                <div class="timeline-content ">
+                                                    <dt>Inbound</dt>
+                                                    <dd>Kamis, 20 Agustus 2018 11.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-orange"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>QC Checking</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 08.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-orange"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>Labeling</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 09.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-orange"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>Storing</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 10.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-orange"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>Packing</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 11.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="far fa-dot-circle bg-indigo"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>Outbound</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 14.00 PM</dd>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <span class="timeline-step p-3 bg-">
+                                                    <i class="fal fa-car-alt bg-blue"></i>
+                                                </span>
+                                                <div class="timeline-content">
+                                                    <dt>Delivery</dt>
+                                                    <dd>Jumat, 21 Agustus 2018 16.00 PM</dd>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                             <i class="far fa-dot-circle bg-orange"></i>
-                                        </span>
-                                         <div class="timeline-content">
-                                            <dt>QC Checking</dt>
-                                            <dd>Jumat, 21 Agustus 2018 08.00 PM</dd>
-                                         </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                             <i class="far fa-dot-circle bg-orange"></i>
-                                        </span>
-                                        <div class="timeline-content">
-                                            <dt>Labeling</dt>
-                                            <dd>Jumat, 21 Agustus 2018 09.00 PM</dd>
-                                        </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                             <i class="far fa-dot-circle bg-orange"></i>
-                                        </span>
-                                         <div class="timeline-content">
-                                            <dt>Storing</dt>
-                                            <dd>Jumat, 21 Agustus 2018 10.00 PM</dd>
-                                         </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                             <i class="far fa-dot-circle bg-orange"></i>
-                                        </span>
-                                         <div class="timeline-content">
-                                            <dt>Packing</dt>
-                                            <dd>Jumat, 21 Agustus 2018 11.00 PM</dd>
-                                         </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                            <i class="far fa-dot-circle bg-indigo"></i>
-                                        </span>
-                                         <div class="timeline-content">
-                                            <dt>Outbound</dt>
-                                            <dd>Jumat, 21 Agustus 2018 14.00 PM</dd>
-                                         </div>
-                                    </div>
-                                    <div>
-                                         <span class="timeline-step p-3 bg-">
-                                            <i class="fal fa-car-alt bg-blue"></i>
-                                        </span>
-                                       
-                                        <div class="timeline-content">
-                                            <dt>Delivery</dt>
-                                            <dd>Jumat, 21 Agustus 2018 16.00 PM</dd>
-                                         </div>
-                                    </div>
-                                </div>
                                     </div>
                                 </div>
                             </div>
@@ -195,8 +193,7 @@
                     <div class="col-lg-7 mb-lg">
                         <div class="card z-index-2 h-100">
                             <div class="card shadow-lg">
-
-                                    <line_chart/>
+                                <line_chart/>
                             </div>
                         </div>
                     </div>

@@ -129,7 +129,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr v-for="data in Outbound_Dummy" :key="data.id" id="table1">
+                              <tr v-for="data in datas" :key="data.id" id="table1">
                                   <td class="justify-content-center ps-4">{{data.id}}</td>
                                   <td class="justify-content-center">{{data.kd_inbound}}</td>
                                   <td class="justify-content-center">{{data.costumer}}</td>
@@ -152,15 +152,16 @@
 
 
 <script>
-// import Outbonddummy from "../components/data-dummy/Outbond-Dummy.json";
+import Outbonddummy from "../components/data-dummy/Outbond-Dummy.json";
 // import $ from "jquery";
-import axios from "axios";
+// import axios from "axios";
 export default{
     name: 'OutboundPage',
     components: {}, 
     data(){
       return{
-         Outbound_Dummy:[]
+        //  Outbound_Dummy:[],
+         datas:Outbonddummy
       }
     },
     mounted(){
@@ -171,16 +172,16 @@ export default{
     //       className: 'dt-head-center dt-body-center'
     //   }]
     //  });
-      this.load()
+      // this.load()
     },  
     methods: {
-      load(){
-        axios.get('http://localhost:3000/Outbound_Dummy').then(res => {
-        this.Outbound_Dummy = res.data //respon dari rest api dimasukan ke users
-      }).catch ((err) => {
-        console.log(err);
-      })
-    }
+    //   load(){
+    //     axios.get('http://localhost:3000/Outbound_Dummy').then(res => {
+    //     this.Outbound_Dummy = res.data //respon dari rest api dimasukan ke users
+    //   }).catch ((err) => {
+    //     console.log(err);
+    //   })
+    // }
     }
 }
 </script>

@@ -5,7 +5,7 @@
       <div class="card-header pb-1 float-end bg-white border-0">
           <div class="input-group w-25 pe-1 float-end">
             <!-- <i class="far fa-search text-dark"></i> -->
-            <input type="text" class="form-control border-1" placeholder="   search..." v-model="filter" />
+            <input type="text" class="form-control border-1" placeholder="   search..."  /> <!--v-model="filter"-->
           </div>
       </div>
       <div class="card-body">
@@ -79,7 +79,7 @@ import axios from 'axios'
 
     },
     beforeMount(){
-      this.onClick()
+      // this.onClick()
     },
     mounted(){
     //    $('#table1').dataTable({
@@ -109,24 +109,24 @@ import axios from 'axios'
        document.getElementById("myForm").style.display = "block";
       },  
      
-     onClick(){
-      this.$toast.success({
-         title:'Data Transaksi asdasdasd asdasdasda asdadadadasda  ',
-         message:'Data Transaksi asdasdasd asdasdasda asdadadadasda Data Transaksi asdasdasd asdasdasda asdadadadasda',
-         showMethod : 'slideInRight',
-         hideMethod : 'slideOutRight',
-         showDuration :1000 ,
-         hideDuration : 1000,
-         timeOut : 99500,
-         icon: "../foto-produk/nanti-kita-sambat-hari-ini.jpeg",  
-         closeButton: true ,
-         position: 'top right',
-         color: '#343a40',
-         delay:   600,
-        //  urlBlank: true,
-        //  url: 'https://jaja.i qd/produk/nanti-kita-sambat-tentang-hari-ini-25',
-          })
-      },
+    //  onClick(){
+    //   this.$toast.success({
+    //      title:'Data Transaksi asdasdasd asdasdasda asdadadadasda  ',
+    //      message:'Data Transaksi asdasdasd asdasdasda asdadadadasda Data Transaksi asdasdasd asdasdasda asdadadadasda',
+    //      showMethod : 'slideInRight',
+    //      hideMethod : 'slideOutRight',
+    //      showDuration :1000 ,
+    //      hideDuration : 1000,
+    //      timeOut : 99500,
+    //      icon: "../foto-produk/nanti-kita-sambat-hari-ini.jpeg",  
+    //      closeButton: true ,
+    //      position: 'top right',
+    //      color: '#343a40',
+    //      delay:   600,
+    //     //  urlBlank: true,
+    //     //  url: 'https://jaja.i qd/produk/nanti-kita-sambat-tentang-hari-ini-25',
+    //       })
+    //   },
              load(){
         axios.get('http://localhost:3000/Inbound_Dummy').then(res => {
         this.Inbound_Dummy = res.data //respon dari rest api dimasukan ke users

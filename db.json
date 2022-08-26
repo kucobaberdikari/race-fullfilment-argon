@@ -170,7 +170,45 @@
       "telepon": "0828775983",
       "barcode": "No Barcode",
       "SKU": 20,
-      "stock": 1820
+      "stock": 1820,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 2,
@@ -178,7 +216,45 @@
       "telepon": "0828774323",
       "barcode": "No Barcode",
       "SKU": 22,
-      "stock": 2200
+      "stock": 2200,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 3,
@@ -186,7 +262,45 @@
       "telepon": "08287756545",
       "barcode": "No Barcode",
       "SKU": 15,
-      "stock": 1225
+      "stock": 1225,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 4,
@@ -194,7 +308,45 @@
       "telepon": "0828775793",
       "barcode": "No Barcode",
       "SKU": 10,
-      "stock": 585
+      "stock": 585,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 5,
@@ -202,7 +354,45 @@
       "telepon": "0828775793",
       "barcode": "No Barcode",
       "SKU": 10,
-      "stock": 585
+      "stock": 585,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 6,
@@ -210,7 +400,45 @@
       "telepon": "0828775793",
       "barcode": "No Barcode",
       "SKU": 10,
-      "stock": 585
+      "stock": 585,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 7,
@@ -218,7 +446,45 @@
       "telepon": "0828775793",
       "barcode": "No Barcode",
       "SKU": 10,
-      "stock": 585
+      "stock": 585,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 8,
@@ -226,7 +492,45 @@
       "telepon": "0828775793",
       "barcode": "No Barcode",
       "SKU": 10,
-      "stock": 585
+      "stock": 585,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     },
     {
       "id": 9,
@@ -234,23 +538,45 @@
       "telepon": "0822546952",
       "barcode": "No Barcode",
       "SKU": "2255",
-      "stock": "200"
-    },
-    {
-      "id": 10,
-      "seller": "Agen Depok Bersih3",
-      "telepon": "0255852",
-      "barcode": "No Barcode",
-      "SKU": "2255",
-      "stock": "65"
-    },
-    {
-      "id": 11,
-      "seller": "Agen Depok Bersih2",
-      "telepon": "02152",
-      "barcode": "No Barcode",
-      "SKU": "2255",
-      "stock": "200"
+      "stock": 200,
+      "barang": [
+        {
+          "id_barang": "1",
+          "nama_barang": "Sunlight",
+          "sku": "188898209010",
+          "data_stock_seller": "100",
+          "data_stock_gudang": "100",
+          "tgl_inb": "2022-01-12",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "2",
+          "nama_barang": "Rinso",
+          "sku": "188898203711",
+          "data_stock_seller": "200",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "3",
+          "nama_barang": "Pantene",
+          "sku": "1888982021739",
+          "data_stock_seller": "120",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        },
+        {
+          "id_barang": "4",
+          "nama_barang": "Sunsilk",
+          "sku": "1888982022321",
+          "data_stock_seller": "150",
+          "data_stock_gudang": "100",
+          "tgl_inb": "",
+          "tgl_expired": "2022-11-02"
+        }
+      ]
     }
   ],
   "Orders_Dummy": [
@@ -751,7 +1077,9 @@
       "nama": "muhammad nur",
       "username": "nur",
       "password": "",
-      "email": "kucobaberdikari@gmail.com"
+      "email": "kucobaberdikari@gmail.com",
+      "token": "",
+      "role": "customer"
     }
   ]
 }

@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-main navbar-expand-md px-0 mx-4 shadow-sm border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky px-o mx-4 border-1"
+    class="navbar navbar-main navbar-expand-md px-0 mx-4 shadow-sm border-radius-xl position-sticky bg-white left-auto top-1 z-index-sticky px-o border-1"
     :class="
       this.$store.state.isRTL ? 'top-0 position-sticky z-index-sticky' : ''
     "

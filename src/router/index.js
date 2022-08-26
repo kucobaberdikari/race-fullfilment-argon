@@ -6,6 +6,8 @@ import DashBoard from "@/views/DashBoard";
 // import PageNotFound from "@/views/PageNotFound";
 import InboundPage from "@/views/InboundPage.vue";
 import InventoryPage from '@/views/InventoryPage.vue'
+import InventoryCustomer from '@/views/InventoryCustomer.vue'
+import InventoryCSDummy from '@/views/InventoryCSDummy.vue'
 import OrdersPage from '@/views/Orders-Page.vue'
 import OutboundPage from '@/views/Outbound-Page.vue'
 import ProductPage from '@/views/Product-Page.vue'
@@ -62,6 +64,16 @@ const routes = [
               path: 'inventory',
               name: 'InventoryPage',
               component:InventoryPage 
+            },
+            {
+              path: 'inventory/customer/:id',
+              name: 'InventoryCustomer',
+              component:InventoryCustomer 
+            },
+            {
+              path: 'inventory/customer',
+              name: 'InventoryCSDummy',
+              component:InventoryCSDummy   
             },
             {
               path: 'orders',

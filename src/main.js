@@ -7,6 +7,8 @@ import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 import "./assets/css/argon-dashboard.css";
 import * as VueGoogleMaps from "vue2-google-maps"
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 import ArgonDashboard from "./argon-dashboard";
 
@@ -29,6 +31,7 @@ import "../node_modules/datatables.net-responsive-bs5/js/responsive.bootstrap5.m
 import "../node_modules/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css";
 import "../node_modules/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js";
 import vuetify from './plugins/vuetify'
+Vue.use(VueSweetalert2);
 
   //  app.component('Public-layout', PublicLayout);
   //  app.component('Dashboard-l  ayout', DashboardLayout);

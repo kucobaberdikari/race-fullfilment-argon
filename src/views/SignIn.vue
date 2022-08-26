@@ -46,10 +46,9 @@
                   <div class="px-1 pt-0 text-center card-footer px-lg-2">
                     <p class="mx-auto mb-4 text-sm">
                       Don't have an account?
-                      <a
-                        href="/signup"
-                        class="text-success text-gradient font-weight-bold"
-                      >Sign up</a>
+                      <router-link to="/signup" v-bind="$attrs"
+                      class="text-success text-gradient font-weight-bold">
+                      Sign up</router-link>
                     </p>
                   </div>
                 </div>
